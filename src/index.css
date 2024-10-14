@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Deutschlander ";
-  src: url(assets/fonts/Deutschlander.otf) format('opentype');
+  src: url(assets/fonts/Deutschlander.otf) format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,10 @@
   box-sizing: border-box;
 }
 
-.hero-section {
+
+
+
+/* .hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,15 +26,13 @@
   height: 100vh;
   position: relative;
   width: 100%;
-  overflow: hidden;
   background-color: black;
   color: white;
-}
-.hero-section h1 {
+} */
+section h1 {
   font-family: "Deutschlander ";
-  font-size: 10rem;
-  position: fixed;
-  top: 10%;
+  /*font-size: 10rem;
+  top: 10%;*/
 }
 
 .fancy-menu {
@@ -39,57 +40,57 @@
   bottom: 0;
   display: inline-flex;
   align-items: center;
-  padding: 10px 40px;
+  padding: 10px 27px;
   color: #fff;
   background-color: transparent;
   z-index: 999;
+  margin-bottom: 5px;
 }
 .fancy-menu::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0px; /* Adjust to position the line directly above the menu */
+  top: 6.5px; /* Adjust to position the line directly above the menu */
   left: 50%;
   transform: translateX(-50%) translateY(200%); /* Center the line above the menu */
   width: 71%; /* Length of the line */
   height: 0.5px; /* Thickness of the line */
-  background-color: gray;
+  background-color: #474747;
 }
 
-.fancy-menu .line-1 {
+.line-1 {
   position: absolute;
-  border-top: 0.5px solid gray;
-  top: 50%;
+  border-top: 0.5px solid #474747;
+  top: 65%;
   width: 100vw;
   left: -100vw;
 }
 .line-1::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0; /* Align it to the right end of the line */
   top: 50%;
   width: 30px; /* Width of the small line */
   height: 0.5px; /* Height of the small line */
-  background-color: gray; /* Color of the small line */
-  transform: rotate(-45deg) translateY(-100%) translateX(100%); /* Center it vertically and shift to the right */
+  background-color: #474747; /* Color of the small line */
+  transform: rotate(-45deg) translateY(-200%) translateX(103%);
   transform-origin: 100% 100%;
 }
 
-
 .line-2 {
   position: absolute;
-  border-top: 0.5px solid gray;
-  top: 50%;
+  border-top: 0.5px solid #474747;
+  top: 65%;
   width: 100vw;
   right: -100vw;
 }
 .line-2::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0; /* Align it to the left end of the line */
   top: 50%;
   width: 30px; /* Width of the small line */
   height: 0.5px; /* Height of the small line */
-  background-color: gray; /* Color of the small line */
+  background-color: #474747; /* Color of the small line */
   transform: rotate(45deg) translateY(-100%) translateX(-100%); /* Rotate and position to connect to the left */
   transform-origin: 1% 100%; /* Set the origin for rotation to the left end */
 }
@@ -102,39 +103,157 @@
   position: fixed;
   bottom: 0;
   height: 14vh;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.689),rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-}
-
-.frame-left {
-  height: 95vh;
-  width: 2px;
-  background-color: gray;
-  left: 1rem;
-  position: fixed;
-  margin: auto;
-}
-.frame-right {
-  height: 95vh;
-  width: 2px;
-  background-color: gray;
-  right: 1rem;
-  position: fixed;
-  margin: auto;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.84),
+    rgba(0, 0, 0, 0.295),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 .frame-top {
   position: fixed;
   top: 1rem;
+  width: 100vw;
 }
 .top-line-1 {
   position: absolute;
   border-top: 0.5px solid white;
-  width: 100vw;
-  right: 30vw;
+  width: 40vw;
+  left: 0;
 }
 .top-line-2 {
   position: absolute;
   border-top: 0.5px solid white;
-  width: 100vw;
-  left: 30vw;
+  width: 40vw;
+  right: 0;
 }
+
+/* MENU */
+
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0);
+  outline: none;
+  border: none;
+  width: 42px;
+  height: 20px;
+  transition: all 250ms ease-out;
+  cursor: pointer;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  background: white;
+  transition: all 250ms ease-out;
+  will-change: transform;
+}
+
+.burger:before {
+  transform: translateY(-3px);
+}
+
+.burger:after {
+  transform: translateY(3px);
+}
+
+.active.burger:before {
+  transform: translateY(0) rotate(30deg);
+}
+
+.active.burger:after {
+  transform: translateY(0) rotate(-30deg);
+}
+
+
+
+
+/* src/components/Header.css */
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the navbar content */
+  padding: 10px 0; /* Padding around the navbar */
+  position: fixed; /* Fixed position */
+  top: 0; /* Align to the top of the page */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  left: 0;
+  right: 0;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.nav-container::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -0.5px; /* Position the line just below the navbar */
+  left: 0;
+  right: 0;
+  height: 0.5px; /* Thickness of the line */
+  background-color: #474747; /* Line color */
+  width: 307px; /* Make the line span the full width */
+  margin: 0 auto;
+}
+
+.navbar ul {
+  list-style: none; /* Remove bullet points */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox to arrange items horizontally */
+}
+
+.navbar a {
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline */
+  padding: 8px 16px; /* Padding around links */
+  border-radius: 4px; /* Rounded corners */
+}
+
+
+
+
+.nav-line-2 {
+  position: absolute;
+  border-top: 0.5px solid #474747;
+  top: 50%;
+  width: 100vw;
+  right: -100vw;
+}
+.nav-line-2::after {
+  content: "";
+  position: absolute;
+  left: 0; /* Align it to the left end of the line */
+  top: 50%;
+  width: 30px; /* Width of the small line */
+  height: 0.5px; /* Height of the small line */
+  background-color: #474747; /* Color of the small line */
+  transform: rotate(-45deg) translateY(-100%) translateX(-100%); /* Rotate and position to connect to the left */
+  transform-origin: 1% 100%; /* Set the origin for rotation to the left end */
+}
+
+.nav-line-1 {
+  position: absolute;
+  border-top: 0.5px solid #474747;
+  top: 50%;
+  width: 100vw;
+  left: -100vw;
+}
+.nav-line-1::after {
+  content: "";
+  position: absolute;
+  right: 0; /* Align it to the right end of the line */
+  top: 50%;
+  width: 30px; /* Width of the small line */
+  height: 0.5px; /* Height of the small line */
+  background-color: #474747; /* Color of the small line */
+  transform: rotate(45deg) translateY(-100%) translateX(100%); /* Center it vertically and shift to the right */
+  transform-origin: 100% 100%;
+}
+
