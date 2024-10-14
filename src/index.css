@@ -49,10 +49,10 @@ section h1 {
 .fancy-menu::before {
   content: "";
   position: absolute;
-  top: 6.5px; /* Adjust to position the line directly above the menu */
+  top: 3px; /* Adjust to position the line directly above the menu */
   left: 50%;
   transform: translateX(-50%) translateY(200%); /* Center the line above the menu */
-  width: 71%; /* Length of the line */
+  width: 66%; /* Length of the line */
   height: 0.5px; /* Thickness of the line */
   background-color: #474747;
 }
@@ -69,7 +69,7 @@ section h1 {
   position: absolute;
   right: 0; /* Align it to the right end of the line */
   top: 50%;
-  width: 30px; /* Width of the small line */
+  width: 34px; /* Width of the small line */
   height: 0.5px; /* Height of the small line */
   background-color: #474747; /* Color of the small line */
   transform: rotate(-45deg) translateY(-200%) translateX(103%);
@@ -88,7 +88,7 @@ section h1 {
   position: absolute;
   left: 0; /* Align it to the left end of the line */
   top: 50%;
-  width: 30px; /* Width of the small line */
+  width: 34.5px; /* Width of the small line */
   height: 0.5px; /* Height of the small line */
   background-color: #474747; /* Color of the small line */
   transform: rotate(45deg) translateY(-100%) translateX(-100%); /* Rotate and position to connect to the left */
