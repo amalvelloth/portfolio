@@ -11,7 +11,7 @@ function Hero() {
             <h1 className='text-center font-deutschlander text-9xl'>AMAL V</h1>
             <h3 className='text-center'>Full stack Developer - Web Designer - React Developer</h3>
 
-            <video className="w-1/2 h-1/2 rounded-xl border" loop autoplay muted>
+            <video className="md:w-1/2 w-4/5 mt-3 rounded-2xl border-4 border-[#474747]" playsInline loop autoPlay muted>
                 <source src={blackSpace} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
