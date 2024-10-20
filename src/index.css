@@ -9,13 +9,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'SmallestPixel';
+  src: url('../fonts/smallest-pixel.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
-
 
 
 /* .hero-section {
@@ -102,7 +108,7 @@ section h1 {
 .fade-effect {
   position: fixed;
   bottom: 0;
-  height: 14vh;
+  height: 10vh;
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.84),

@@ -9,6 +9,17 @@ export default {
       // fontFamily: {
       //   deutschlander: ['Deutschlander', 'sans-serif'],
       // },
+      fontFamily: {
+        'smallest-pixel': ['SmallestPixel', 'sans-serif'],
+      },
+      
+      screens: {
+        'max-sm': {'max': '640px'},
+        'max-md': {'max': '768px'},
+        'max-lg': {'max': '1024px'},
+        'max-xl': {'max': '1280px'},
+        'max-2xl': {'max': '1536px'},
+      }
     },
   },
   plugins: [],

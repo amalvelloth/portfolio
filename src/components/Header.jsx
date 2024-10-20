@@ -4,7 +4,7 @@ function Header() {
   return (
     <nav className='navbar'>
       <div
-        className="fixed z-0 top-0 w-full h-[14vh] bg-gradient-to-b from-black/80 via-black/30 to-transparent"
+        className="fixed z-0 top-0 w-full h-[10vh] bg-gradient-to-b from-black/80 via-black/30 to-transparent"
         style={{
           background:
             'linear-gradient(to bottom, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
