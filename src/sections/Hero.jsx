@@ -1,15 +1,17 @@
 import React from 'react';
 import BurgerMenu from '../components/BurgerMenu';
 import blackSpace from '../assets/black_space.mp4';
+import LetsTalk from '../components/LetsTalk';
 
 function Hero() {
     return (
         <section id='home' className="flex z-10 flex-col items-center md:py-10 min-h-screen w-full bg-black text-white relative overflow-hidden">
+            
             {/* Left vertical line */}
-            <div className="fixed lg:block hidden left-4 top-[1.4rem] h-screen w-[1px] bg-[#474747]"></div>
+            <div className="fixed lg:block hidden left-[1.4rem] top-[1.4rem] h-screen w-[1px] bg-[#474747]"></div>
 
             {/* Right vertical line */}
-            <div className="fixed lg:block hidden right-4 top-[1.4rem] bottom-[2rem] h-[100%] w-[1px] bg-[#474747]"></div>
+            <div className="fixed lg:block hidden right-[1.4rem] top-[1.4rem] bottom-[2rem] h-[100%] w-[1px] bg-[#474747]"></div>
 
             {/* Inner div filling the height of the section */}
             <div className='flex flex-col justify-center items-center h-full w-full p-4 max-md:px-1'>

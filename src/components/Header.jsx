@@ -1,4 +1,5 @@
 import React from 'react';
+import LetsTalk from './LetsTalk';
 
 function Header() {
   return (
@@ -10,6 +11,7 @@ function Header() {
             'linear-gradient(to bottom, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
         }}
       ></div>
+      <LetsTalk/>
       <div className="nav-container hidden lg:block">
         <div className="nav-line-1"></div>
         <span className="nav-line-2"></span>
