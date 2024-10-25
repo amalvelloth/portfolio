@@ -7,7 +7,7 @@ function ContactPage() {
     <>
       <Header />
       <section className='flex justify-center items-center h-screen w-full text-center bg-black text-white relative'>
-        <div className='absolute gap-10 flex items-center top-[7rem] left-[3rem]'>
+        <div className='gap-10 flex items-center top-[7rem] left-[3rem]'>
           <h1 className='text-9xl '>Connect</h1>
           <GoArrowRight className='text-9xl' />
           <h1 className='text-9xl '>Connect</h1>

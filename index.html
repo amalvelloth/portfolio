@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="https://img-cdn.magiceden.dev/rs:fill:400:400:0:0/plain/https://arweave.net/xMwA_4DKGfEYlvLew6shwhxVrESol5NQ31v0wByoaW4" />
+  <link rel="icon" type="image/svg+xml"
+    href="https://img-cdn.magiceden.dev/rs:fill:400:400:0:0/plain/https://arweave.net/xMwA_4DKGfEYlvLew6shwhxVrESol5NQ31v0wByoaW4" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Porttfolio</title>
   <!--Lenis smooth scroll-->
@@ -15,5 +16,13 @@
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
+
+<script>
+  document.querySelectorAll('iframe').forEach((iframe) => {
+    if (iframe.src.includes("vercel")) {
+      iframe.style.display = "none";
+    }
+  });
+</script>
 
 </html>
