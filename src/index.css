@@ -23,6 +23,10 @@
   box-sizing: border-box;
 }
 
+iframe[src*="vercel"] {
+  display: none !important;
+}
+
 
 /* .hero-section {
   display: flex;

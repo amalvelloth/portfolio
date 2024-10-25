@@ -1,6 +1,6 @@
 import React from 'react'
 import LineWrapper from '../components/LineWrapper'
-import LetsTalk from '../components/LetsTalk'
+// import LetsTalk from '../components/LetsTalk'
 
 function Contact() {
   return (

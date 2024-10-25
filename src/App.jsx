@@ -5,8 +5,9 @@ import Hero from './sections/Hero';
 import About from './sections/About';
 import Project from './sections/Project';
 import Contact from './sections/Contact';
-import { BrowserRouter as Router } from 'react-router-dom';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LetsTalk from './components/LetsTalk';
+import ContactPage from './page/ContactPage';
 
 function App() {
   useEffect(() => {
@@ -37,19 +38,23 @@ function App() {
       lenis.destroy(); // Destroy Lenis instance
     };
   }, []);
-  
+
   return (
     <Router>
-    <div>
-      <Header />       
-      <main>
-        <Hero /> 
-        <About />     
-        <Project /> 
-        <Contact />
-      </main>
-      <Footer /> 
-    </div>
+      <Header />
+      <Routes>
+        <Route path="/" element={
+          <main>
+            <Hero />
+            <About />
+            <Project />
+            <Contact />
+            <LetsTalk />
+          </main>
+        } />
+        <Route path="/contactpage" element={<ContactPage />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }
