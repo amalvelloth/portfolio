@@ -15,6 +15,12 @@
   font-weight: 100;
   font-style: normal;
 }
+@font-face {
+  font-family: 'HelveticaNowDisplayBold';
+  src: url('../fonts/HelveticaNowDisplayBold.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
 
 
 * {
@@ -265,4 +271,25 @@ section h1 {
   background-color: #474747; /* Color of the small line */
   transform: rotate(45deg) translateY(-100%) translateX(100%); /* Center it vertically and shift to the right */
   transform-origin: 100% 100%;
+}
+
+/* Framer motion */
+
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: bottom;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0f0f0f;
+  transform-origin: top;
 }

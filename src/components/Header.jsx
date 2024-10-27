@@ -17,7 +17,7 @@ function Header() {
         <span className="nav-line-2"></span>
         <ul>
           <li className='z-10'>
-            <a href="#home">Home</a>
+            <a href="/">Home</a>
           </li>
           <li className='z-10'>
             <a href="#about">About</a>

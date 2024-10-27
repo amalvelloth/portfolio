@@ -6,11 +6,35 @@ export default {
   ],
    theme: {
     extend: {
+
+      mixBlendMode: {
+        // Ensure these are included
+        normal: 'normal',
+        multiply: 'multiply',
+        screen: 'screen',
+        overlay: 'overlay',
+        darken: 'darken',
+        lighten: 'lighten',
+        colorDodge: 'color-dodge',
+        colorBurn: 'color-burn',
+        hardLight: 'hard-light',
+        softLight: 'soft-light',
+        difference: 'difference',
+        exclusion: 'exclusion',
+        hue: 'hue',
+        saturation: 'saturation',
+        color: 'color',
+        luminosity: 'luminosity',
+      },
+
       // fontFamily: {
       //   deutschlander: ['Deutschlander', 'sans-serif'],
       // },
       fontFamily: {
         'smallest-pixel': ['SmallestPixel', 'sans-serif'],
+      },
+      fontFamily: {
+        'HelveticaNowDisplayMedium': ['HelveticaNowDisplayMedium', 'sans-serif'],
       },
       
       screens: {
