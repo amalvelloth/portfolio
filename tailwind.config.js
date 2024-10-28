@@ -7,7 +7,7 @@ export default {
    theme: {
     extend: {
 
-      mixBlendMode: {
+      mixBlendMode: { 
         // Ensure these are included
         normal: 'normal',
         multiply: 'multiply',

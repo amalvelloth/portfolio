@@ -24,8 +24,9 @@ function AnimatedRoutes() {
           element={
             <main>
               <Hero />
-              <About />
+              
               <Project />
+              <About />
               <Contact />
               <LetsTalk />
             </main>

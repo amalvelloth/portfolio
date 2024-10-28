@@ -11,7 +11,7 @@ function Hero() {
                 <h1 className='text-center max-md:mt-2 leading-none font-deutschlander text-[9rem]'>
                     AMAL V
                 </h1>
-                <h3 className='font-smallest-pixel text-center text-lg md:text-xl'>
+                <h3 className='font-mono text-center text-lg md:text-xl'>
                     Full stack Developer - Creative - React Developer
                 </h3>
 
@@ -28,10 +28,10 @@ function Hero() {
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div className="absolute text-3xl font-thin font-smallest-pixel hidden md:block left-0 bottom-0 p-10">
-                    <h2>CREATIVE</h2>
-                    <h2>FULL STACK</h2>
-                    <h2>REACT DEVELOPER</h2>
+                <div className="absolute text-3xl font-mono hidden md:block left-0 bottom-0 p-10">
+                    <h2 className='font-mono'>CREATIVE</h2>
+                    <h2 className='font-mono'>FULL STACK</h2>
+                    <h2 className='font-mono'>REACT DEVELOPER</h2>
                 </div>
                 <div className="absolute text-xl text-[#474747] hidden md:block right-0 bottom-0 p-10">
                     <h2>since 2024</h2>
