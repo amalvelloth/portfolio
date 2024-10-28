@@ -25,7 +25,7 @@ function About() {
       y: 50,
       opacity: 0,
       stagger: 0.1,
-      duration: 1,
+      duration: 1.3, 
       ease: 'power1.out', 
       scrollTrigger: {
         trigger: textRef1.current,
