@@ -28,6 +28,7 @@ function Hero() {
                         Your browser does not support the video tag.
                     </video>
                 </div>
+                
                 <div className="absolute text-3xl font-mono hidden md:block left-0 bottom-0 p-10">
                     <h2 className='font-mono'>CREATIVE</h2>
                     <h2 className='font-mono'>FULL STACK</h2>
@@ -39,12 +40,13 @@ function Hero() {
             </div>
 
             {/* Hamburger menu for mobile */}
-            <div className="fancy-menu block lg:hidden mt-4">
+            {/* <div className="fancy-menu block lg:hidden mt-4">
                 <BurgerMenu />
                 <span className="menu-text">MENU</span>
                 <span className="line-1"></span>
                 <span className="line-2"></span>
-            </div>
+            </div> */}
+            <BurgerMenu/>
 
             {/* Bottom horizontal line */}
             <div className="lg:block hidden fixed bottom-[1.4rem] w-full h-[1px] z-50 bg-[#474747]"></div>

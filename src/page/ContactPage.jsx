@@ -71,12 +71,8 @@ function ContactPage() {
         </div>
 
 
-        <div className="fancy-menu block lg:hidden mt-4">
-          <BurgerMenu/>
-          <span className="menu-text text-white">MENU</span>
-          <span className="line-1"></span>
-          <span className="line-2"></span>
-        </div>
+        <BurgerMenu/>
+
         <div className="fade-effect absolute bottom-0 left-0 right-0"></div>
       </section>
     </>

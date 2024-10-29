@@ -24,8 +24,9 @@ function About() {
     gsap.from(allLines, {
       y: 50,
       opacity: 0,
+      delay: 0.1,
       stagger: 0.1,
-      duration: 1.3, 
+      duration: 1, 
       ease: 'power1.out', 
       scrollTrigger: {
         trigger: textRef1.current,
@@ -45,7 +46,7 @@ function About() {
     <>
       <LineWrapper />
       <section id="about" className="h-full py-14 bg-black text-white flex items-center">
-        <div className="container mx-auto flex max-md:flex-col md:justify-center">
+        <div className="container mx-auto flex max-lg:flex-col md:justify-center">
           <div className="m-2">
             <p ref={textRef1} className="overflow-hidden">
               I'm dedicated to crafting interactive web experiences with the MERN stack, blending 
