@@ -24,7 +24,6 @@ function About() {
     gsap.from(allLines, {
       y: 50,
       opacity: 0,
-      delay: 0.1,
       stagger: 0.1,
       duration: 1, 
       ease: 'power1.out', 

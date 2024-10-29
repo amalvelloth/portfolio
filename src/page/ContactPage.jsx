@@ -69,10 +69,8 @@ function ContactPage() {
             </button>
           </div>
         </div>
-
-
         <BurgerMenu/>
-
+        
         <div className="fade-effect absolute bottom-0 left-0 right-0"></div>
       </section>
     </>
