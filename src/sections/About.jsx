@@ -29,8 +29,9 @@ function About() {
       ease: 'power1.out', 
       scrollTrigger: {
         trigger: textRef1.current,
-        start: 'top 90%',    
-        toggleActions: 'play none play none',
+        start: 'top 100%',    
+        toggleActions: 'restart none reverse none',
+        immediateRender: true,
       },
     });
 
