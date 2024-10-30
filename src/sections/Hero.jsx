@@ -18,7 +18,7 @@ function Hero() {
                 {/* Video block */}
                 <div className='px-7 flex justify-center'>
                     <video
-                        className='md:w-1/2 w-4/7 max-md:mt-16 md:mt-10 rounded-lg border-4 border-[#474747] shrink-0'
+                        className='md:w-1/2 w-4/7 max-md:mt-16 md:mt-10 rounded-lg md:rounded-xl border-4 border-[#474747] shrink-0'
                         playsInline
                         loop
                         autoPlay
