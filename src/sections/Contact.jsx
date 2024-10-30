@@ -8,9 +8,9 @@ function Contact() {
     <>
       <LineWrapper />
       <section id='contact' className="h-full py-14 bg-black text-white flex items-center">
-        <div className="container mx-auto flex md:justify-center">
+        <div className="container max-lg:flex-col mx-auto flex md:justify-center">
           <div className='m-2'>
-            <h2 className="text-3xl font-bold">This is Contact container</h2>
+            <h2 className="text-3xl font-bold">Got a prject?</h2>
             <p>Here will be the my Contact details.</p>
           </div>
           <div className='m-2'>
