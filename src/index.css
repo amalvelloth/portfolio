@@ -334,3 +334,49 @@ section h1 {
 .pulse-shadow:hover {
   animation: hover-shadow 1s forwards; /* Use the new hover animation */
 }
+
+
+
+
+
+
+
+
+
+.project {
+  display:flex;	
+  outline:1px solid red;
+}
+
+.left {
+	width:50%;
+}
+
+.detailsWrapper {
+	margin:auto;
+	width:80%;
+}
+
+.details {
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+  align-items: center;
+}
+
+
+.right {
+	outline:1px solid purple;
+	width:50%;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+.photos {
+	width:40vw;
+	height:40vw;
+	background:maroon;
+}
