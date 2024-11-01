@@ -32,6 +32,54 @@ function Project() {
       });
     });
 
+
+    const cursor = document.querySelector(".cursor");
+    const hand = document.querySelector(".hand");
+    const details = document.querySelector(".details");
+
+    gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+
+    let mouseX;
+    let mouseY;
+
+    window.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      gsap.to(cursor, 0.5, { x: mouseX, y: mouseY })
+    })
+
+    details.addEventListener('mouseenter', () => {
+      gsap.to(hand, 1, {
+        scale: 1,
+        opacity: 1,
+        top: '15px',
+        left: '40px',
+        rotate: 0,
+        ease: Elastic.easeOut.config(1, 0.3)
+      })
+    })
+
+    details.addEventListener('mousemove', () => {
+      gsap.to(hand, 1, {
+        x: mouseX,
+        y: mouseY
+      })
+    })
+
+
+    details.addEventListener('mouseleave', () => {
+      gsap.to(hand, 0.2, {
+        scale: 0,
+        opacity: 0,
+        top: '10px',
+        left: '40px',
+        rotate: 0,
+      })
+    })
+
+
+
     return () => ctx.revert();
   }, []);
 
@@ -72,9 +120,21 @@ function Project() {
             color: "#000",
           }}
         >
+
+
+
+          <div className="cursor"></div>
+          <div className="hand">
+            <h2 className="text-2xl text-white">Live Demo</h2>
+          </div>
+
+
+
+
           <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
             <img className="w-3/4" src={nikeAdidas} alt="" />
           </Box>
+
           <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
             <img className="w-3/4" src={midnightMagic} alt="" />
           </Box>
@@ -82,6 +142,7 @@ function Project() {
             <img className="w-3/4" src={zenitsu} alt="" />
           </Box>
         </Box>
+
       </Box>
     </React.Fragment>
   );

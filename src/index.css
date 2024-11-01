@@ -380,3 +380,40 @@ section h1 {
 	height:40vw;
 	background:maroon;
 }
+
+
+
+
+/* GSAP mouse hover */
+
+.cursor, .hand {
+  position: fixed;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform .1s;
+}
+
+.cursor {
+  background: white;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  z-index: 999;
+}
+
+.hand {
+  background-color: rgb(155,0,255);
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  z-index: 9999;
+  display: grid;
+  place-content: center;
+  transform: rotate(45deg);
+  opacity: 0;
+
+  svg {
+    width: 80px;
+  }
+}
