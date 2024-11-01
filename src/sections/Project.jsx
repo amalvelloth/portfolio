@@ -14,14 +14,14 @@ function Project() {
     const ctx = gsap.context(() => {
       // Set initial state for photos (excluding the first one)
       gsap.set(".photo:not(:first-child)", { opacity: 0, scale: 0.5 });
-  
+
       const animation = gsap.to(".photo:not(:first-child)", {
         opacity: 1,
         scale: 1,
         duration: 1,
         stagger: 0.5, // Adjusting stagger for smoother animation
       });
-  
+
       ScrollTrigger.create({
         trigger: ".gallery",
         start: "top top",
@@ -31,10 +31,10 @@ function Project() {
         scrub: true,
       });
     });
-  
+
     const hand = document.querySelector(".hand");
     const detailsElements = document.querySelectorAll(".details");
-  
+
     detailsElements.forEach((details) => {
       details.addEventListener("mouseenter", () => {
         gsap.to(hand, 1, {
@@ -46,14 +46,14 @@ function Project() {
           ease: Elastic.easeOut.config(1, 0.3),
         });
       });
-  
+
       details.addEventListener("mousemove", (e) => {
         gsap.to(hand, 1, {
           x: e.clientX,
           y: e.clientY,
         });
       });
-  
+
       details.addEventListener("mouseleave", () => {
         gsap.to(hand, 0.2, {
           scale: 0,
@@ -64,7 +64,7 @@ function Project() {
         });
       });
     });
-  
+
     return () => ctx.revert();
   }, []);
 
@@ -107,17 +107,21 @@ function Project() {
           <div className="hand">
             <h2 className="text-base text-black">Live Demo</h2>
           </div>
-
-          <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
-            <img className="w-3/4" src={nikeAdidas} alt="" />
-          </Box>
-
-          <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
-            <img className="w-3/4" src={midnightMagic} alt="" />
-          </Box>
-          <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, color: "white" }}>
-            <img className="w-3/4" src={zenitsu} alt="" />
-          </Box>
+          <a href="https://nike-adidas.netlify.app/">
+            <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
+              <img className="w-3/4" src={nikeAdidas} alt="" />
+            </Box>
+          </a>
+          <a href="https://midnightmagic.netlify.app/">
+            <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
+              <img className="w-3/4" src={midnightMagic} alt="" />
+            </Box>
+          </a>
+          <a href="https://zenitsu-parallax.netlify.app/">
+            <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, color: "white" }}>
+              <img className="w-3/4" src={zenitsu} alt="" />
+            </Box>
+          </a>
         </Box>
       </Box>
     </React.Fragment>
