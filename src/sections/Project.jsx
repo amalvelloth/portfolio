@@ -107,17 +107,17 @@ function Project() {
           <div className="hand">
             <h2 className="text-base text-black">Live Demo</h2>
           </div>
-          <a href="https://nike-adidas.netlify.app/">
+          <a href="https://nike-adidas.netlify.app/" target="_blank" rel="noopener noreferrer">
             <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
               <img className="w-3/4" src={nikeAdidas} alt="" />
             </Box>
           </a>
-          <a href="https://midnightmagic.netlify.app/">
+          <a href="https://midnightmagic.netlify.app/" target="_blank" rel="noopener noreferrer">
             <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
               <img className="w-3/4" src={midnightMagic} alt="" />
             </Box>
           </a>
-          <a href="https://zenitsu-parallax.netlify.app/">
+          <a href="https://zenitsu-parallax.netlify.app/" target="_blank" rel="noopener noreferrer">
             <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, color: "white" }}>
               <img className="w-3/4" src={zenitsu} alt="" />
             </Box>
