@@ -10,18 +10,23 @@
 }
 
 @font-face {
-  font-family: 'SmallestPixel';
-  src: url('../fonts/smallest-pixel.ttf') format('truetype');
+  font-family: "RmNeue";
+  src: url("assets/fonts/RMNeueTRIAL-Regular.otf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
-  font-family: 'HelveticaNowDisplayBold';
-  src: url('../fonts/HelveticaNowDisplayBold.ttf') format('truetype');
+  font-family: "HelveticaNowDisplayBold";
+  src: url("../fonts/HelveticaNowDisplayBold.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "Gridular";
+  src: url("assets/fonts/Gridular-Regular.otf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
 
 * {
   padding: 0;
@@ -32,7 +37,6 @@
 iframe[src*="vercel"] {
   display: none !important;
 }
-
 
 /* .hero-section {
   display: flex;
@@ -51,12 +55,14 @@ iframe[src*="vercel"] {
   top: 10%;
 }*/
 
-
 #home h1 {
   font-family: Dimentions;
 }
 #home p {
-  font-family: SmallestPixel;
+  font-family: RmNeue;
+}
+#home p span {
+  font-family: Gridular;
 }
 
 .fancy-menu {
@@ -196,9 +202,6 @@ iframe[src*="vercel"] {
   transform: translateY(0) rotate(-30deg);
 }
 
-
-
-
 /* src/components/Header.css */
 .navbar {
   display: flex;
@@ -214,7 +217,7 @@ iframe[src*="vercel"] {
 }
 
 .nav-container::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: -0.5px; /* Position the line just below the navbar */
@@ -239,9 +242,6 @@ iframe[src*="vercel"] {
   padding: 8px 16px; /* Padding around links */
   border-radius: 4px; /* Rounded corners */
 }
-
-
-
 
 .nav-line-2 {
   position: absolute;
@@ -302,12 +302,11 @@ iframe[src*="vercel"] {
   transform-origin: top;
 }
 
-
-
 /* Animated Pulse shadow */
 
 @keyframes pulse-shadow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: inset 0 0 15px 5px rgba(255, 255, 255, 0.3);
   }
   50% {
@@ -316,7 +315,8 @@ iframe[src*="vercel"] {
 }
 
 @keyframes pulse-shadow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: inset 0 0 15px 5px rgba(255, 255, 255, 0.3);
   }
   /* 50% {
@@ -325,13 +325,13 @@ iframe[src*="vercel"] {
 }
 
 @keyframes hover-shadow {
-  0%,100% {
+  0%,
+  100% {
     box-shadow: inset 0 0 15px 5px rgba(255, 255, 255, 0.3);
   }
   50% {
     box-shadow: inset 0 0 30px 15px rgba(255, 255, 255, 0.7);
   }
-  
 }
 
 .pulse-shadow {
@@ -343,63 +343,52 @@ iframe[src*="vercel"] {
   animation: hover-shadow 1s forwards; /* Use the new hover animation */
 }
 
-
-
-
-
-
-
-
-
 .project {
-  display:flex;	
-  outline:1px solid red;
+  display: flex;
+  outline: 1px solid red;
 }
 
 .left {
-	width:50%;
+  width: 50%;
 }
 
 .detailsWrapper {
-	margin:auto;
-	width:80%;
+  margin: auto;
+  width: 80%;
 }
 
 .details {
-	height:100vh;
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-
 .right {
-	outline:1px solid purple;
-	width:50%;
-	height:100vh;
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
+  outline: 1px solid purple;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .photos {
-	width:40vw;
-	height:40vw;
-	background:maroon;
+  width: 40vw;
+  height: 40vw;
+  background: maroon;
 }
-
-
-
 
 /* GSAP mouse hover */
 
-.cursor, .hand {
+.cursor,
+.hand {
   position: fixed;
   left: 0;
   border-radius: 50%;
   pointer-events: none;
-  transition: transform .1s;
+  transition: transform 0.1s;
 }
 
 .cursor {
@@ -413,11 +402,12 @@ iframe[src*="vercel"] {
 .hand {
   background-color: white;
   top: 50%;
-  width: 100px;
-  height: 30px;  
+  width: 90px;
+  height: 25px;
   z-index: 9999;
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 0;
   transform: rotate(45deg);
   opacity: 0;

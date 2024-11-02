@@ -6,6 +6,8 @@ import LineWrapper from "../components/LineWrapper";
 import nikeAdidas from "../assets/images/nikeAdidas.png";
 import midnightMagic from "../assets/images/midnightMagic.png";
 import zenitsu from "../assets/images/zenitsu.png";
+import { GoArrowUpRight } from "react-icons/go";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,7 +43,7 @@ function Project() {
           scale: 1,
           opacity: 1,
           top: "15px",
-          left: "40px",
+          left: "20px",
           rotate: 0,
           ease: Elastic.easeOut.config(1, 0.3),
         });
@@ -104,8 +106,10 @@ function Project() {
             color: "#000",
           }}
         >
-          <div className="hand">
-            <h2 className="text-base text-black">Live Demo</h2>
+          <div className="hand flex justify-center border-[0.5px]">
+            <h2 className="text-sm flex items-center text-black justify-between">Live site
+            <GoArrowUpRight />
+            </h2>
           </div>
           <a href="https://nike-adidas.netlify.app/" target="_blank" rel="noopener noreferrer">
             <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>

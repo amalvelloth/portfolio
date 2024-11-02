@@ -37,10 +37,10 @@ function Hero() {
                     AMAL V
                 </h1>
 
-                <div className='font-mono flex justify-between text-center text-lg max-md:text-md md:text-xl gap-6'>
-                    <p>FULL STACK</p>
-                    <p>CREATIVE</p>
-                    <p>REACT DEVELOPER</p>
+                <div className='font-mono flex justify-between text-center text-lg max-md:text-[13px] md:text-xl gap-6 text-[#CECECE]'>
+                    <p>F<span>U</span>LL <span>S</span>TACK</p>
+                    <p>C<span>R</span>EATIVE</p>
+                    <p><span>R</span>EAC<span>T</span> <span>D</span>EVEL<span>O</span>PER</p>
                 </div>
 
 
@@ -63,7 +63,7 @@ function Hero() {
                     <h2 className='font-mono'>FULL STACK</h2>
                     <h2 className='font-mono'>REACT DEVELOPER</h2>
                 </div>
-                <div className="absolute text-xl text-[#474747] hidden md:block right-0 bottom-0 p-10">
+                <div className="absolute text-xl text-[#474747] hidden md:block left-0 bottom-0 p-10">
                     <h2>since 2024</h2>
                 </div>
             </div>
