@@ -27,9 +27,9 @@ export default {
         luminosity: 'luminosity',
       },
 
-      // fontFamily: {
-      //   deutschlander: ['Deutschlander', 'sans-serif'],
-      // },
+      fontFamily: {
+        Dimentions: ['Dimentions', 'sans-serif'],
+      },
       fontFamily: {
         'smallest-pixel': ['SmallestPixel', 'sans-serif'],
       },

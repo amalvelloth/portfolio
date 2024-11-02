@@ -1,19 +1,48 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import SplitType from 'split-type';
 import BurgerMenu from '../components/BurgerMenu';
 import blackSpace from '../assets/black_space.mp4';
 
 function Hero() {
+    const titleRef = useRef(null);
+
+    useEffect(() => {
+        // Split the text into characters
+        const splitText = new SplitType(titleRef.current, { types: 'chars' });
+
+        // Animate each character
+        gsap.from(splitText.chars, {
+            opacity: 0,
+            y: 50,
+            stagger: 0.05,
+            duration: 0.6,
+            ease: "power3.out",
+        });
+
+        // Cleanup function to revert split after animation (optional)
+        return () => {
+            splitText.revert();
+        };
+    }, []);
+
     return (
         <section id='home' className="flex z-10 flex-col items-center md:py-10 min-h-screen w-full bg-black text-white relative overflow-hidden">
             <div className="fixed lg:block hidden left-[1.4rem] top-[1.4rem] h-screen w-[1px] bg-[#474747]"></div>
             <div className="fixed lg:block hidden right-[1.4rem] top-[1.4rem] bottom-[2rem] h-[100%] w-[1px] bg-[#474747]"></div>
             <div className='flex flex-col justify-center items-center h-full w-full p-4 max-md:px-1'>
-                <h1 className='text-center max-md:mt-2 leading-none font-deutschlander text-[9rem]'>
+
+                {/* Animated Split Title */}
+                <h1 ref={titleRef} className='overflow-hidden font-D text-center max-md:mt-2 leading-none text-[calc(9rem+2vw)]'>
                     AMAL V
                 </h1>
-                <h3 className='font-mono text-center text-lg md:text-xl'>
-                    Full stack Developer - Creative - React Developer
-                </h3>
+
+                <div className='font-mono flex justify-between text-center text-lg max-md:text-md md:text-xl gap-6'>
+                    <p>FULL STACK</p>
+                    <p>CREATIVE</p>
+                    <p>REACT DEVELOPER</p>
+                </div>
+
 
                 {/* Video block */}
                 <div className='px-7 flex justify-center'>
@@ -28,7 +57,7 @@ function Hero() {
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                
+
                 <div className="absolute text-3xl font-mono hidden md:block left-0 bottom-0 p-10">
                     <h2 className='font-mono'>CREATIVE</h2>
                     <h2 className='font-mono'>FULL STACK</h2>
@@ -39,23 +68,14 @@ function Hero() {
                 </div>
             </div>
 
-            {/* Hamburger menu for mobile */}
-            {/* <div className="fancy-menu block lg:hidden mt-4">
-                <BurgerMenu />
-                <span className="menu-text">MENU</span>
-                <span className="line-1"></span>
-                <span className="line-2"></span>
-            </div> */}
-            <BurgerMenu/>
+            <BurgerMenu />
 
             {/* Bottom horizontal line */}
             <div className="lg:block hidden fixed bottom-[1.4rem] w-full h-[1px] z-50 bg-[#474747]"></div>
 
             {/* Fade effect at the bottom */}
             <div className="fade-effect absolute bottom-0 left-0 right-0"></div>
-
-
-        </section >
+        </section>
     );
 }
 

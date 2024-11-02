@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Deutschlander ";
-  src: url(assets/fonts/Deutschlander.otf) format("opentype");
+  font-family: "Dimentions";
+  src: url(assets/fonts/Dimensions300.ttf) format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -45,10 +45,18 @@ iframe[src*="vercel"] {
   background-color: black;
   color: white;
 } */
-section h1 {
-  font-family: "Deutschlander ";
-  /*font-size: 10rem;
-  top: 10%;*/
+/*section h1 {
+  font-family: "Dimentions";
+  font-size: 10rem;
+  top: 10%;
+}*/
+
+
+#home h1 {
+  font-family: Dimentions;
+}
+#home p {
+  font-family: SmallestPixel;
 }
 
 .fancy-menu {
