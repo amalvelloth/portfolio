@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Box from "@mui/material/Box";
 import LineWrapper from "../components/LineWrapper";
 import nikeAdidas from "../assets/images/nikeAdidas.png";
 import midnightMagic from "../assets/images/midnightMagic.png";
 import zenitsu from "../assets/images/zenitsu.png";
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +18,7 @@ function Project() {
         opacity: 1,
         scale: 1,
         duration: 1,
-        stagger: 0.5, // Adjusting stagger for smoother animation
+        stagger: 0.5,
       });
 
       ScrollTrigger.create({
@@ -71,61 +69,52 @@ function Project() {
 
   return (
     <React.Fragment>
-        <LineWrapper />
-        <Box className="gallery" sx={{ display: "flex", minHeight: "100vh", bgcolor: "black" }}>
-          {/* Left image block */}
-          <Box
-            className="leftblock"
-            sx={{
-              width: "30%",
-              height: "100vh",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "white",
-              bgcolor: "black",
-            }}
-          >
-            <div className="title p-2">
-              <h1 className="text-3xl" style={{ fontWeight: "bold" }}>Projects</h1>
-              <h1 className="text-2xl font-thin">These are my Projects</h1>
-            </div>
-          </Box>
+      <LineWrapper />
+      <div className="gallery flex min-h-screen bg-black">
+        {/* Left image block */}
+        <div
+          className="leftblock"
+          style={{
+            width: "30%",
+            height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "white",
+            backgroundColor: "black",
+          }}
+        >
+          <div className="title p-2">
+            <h1 className="text-3xl" style={{ fontWeight: "bold" }}>Projects</h1>
+            <h1 className="text-2xl font-thin">These are my Projects</h1>
+          </div>
+        </div>
 
-          {/* Right text block */}
-          <Box
-            className="rightblock"
-            sx={{
-              width: "70%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              ml: "auto",
-              color: "#000",
-            }}
-          >
-            <div className="hand flex justify-center border-[0.5px]">
-              <h2 className="text-sm flex items-center text-black justify-between">Live site &#8599;
-              </h2>
+        {/* Right text block */}
+        <div className="rightblock w-2/3 flex flex-col justify-center ml-auto">
+          <div className="hand flex justify-center border border-gray-400 p-2">
+            <h2 className="text-sm flex items-center text-black">
+              Live site &#8599;
+            </h2>
+          </div>
+          <a href="https://nike-adidas.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <div className="details text-white text-3xl font-bold mb-3">
+              <img className="w-3/4 mx-auto" draggable="false" src={nikeAdidas} alt="Nike Adidas Project" />
             </div>
-            <a href="https://nike-adidas.netlify.app/" target="_blank" rel="noopener noreferrer">
-              <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
-                <img className="w-3/4" draggable="false" src={nikeAdidas} alt="" />
-              </Box>
-            </a>
-            <a href="https://midnightmagic.netlify.app/" target="_blank" rel="noopener noreferrer">
-              <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
-                <img className="w-3/4" draggable="false" src={midnightMagic} alt="" />
-              </Box>
-            </a>
-            <a href="https://zenitsu-parallax.netlify.app/" target="_blank" rel="noopener noreferrer">
-              <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, color: "white" }}>
-                <img className="w-3/4" draggable="false" src={zenitsu} alt="" />
-              </Box>
-            </a>
-          </Box>
-        </Box>
+          </a>
+          <a href="https://midnightmagic.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <div className="details text-white text-3xl font-bold mb-3">
+              <img className="w-3/4 mx-auto" draggable="false" src={midnightMagic} alt="Midnight Magic Project" />
+            </div>
+          </a>
+          <a href="https://zenitsu-parallax.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <div className="details text-white text-3xl font-bold">
+              <img className="w-3/4 mx-auto" draggable="false" src={zenitsu} alt="Zenitsu Parallax Project" />
+            </div>
+          </a>
+        </div>
+      </div>
     </React.Fragment>
   );
 }
