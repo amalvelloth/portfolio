@@ -6,7 +6,6 @@ import LineWrapper from "../components/LineWrapper";
 import nikeAdidas from "../assets/images/nikeAdidas.png";
 import midnightMagic from "../assets/images/midnightMagic.png";
 import zenitsu from "../assets/images/zenitsu.png";
-import { GoArrowUpRight } from "react-icons/go";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -107,23 +106,22 @@ function Project() {
           }}
         >
           <div className="hand flex justify-center border-[0.5px]">
-            <h2 className="text-sm flex items-center text-black justify-between">Live site
-            <GoArrowUpRight />
+            <h2 className="text-sm flex items-center text-black justify-between">Live site &#8599;
             </h2>
           </div>
           <a href="https://nike-adidas.netlify.app/" target="_blank" rel="noopener noreferrer">
             <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
-              <img className="w-3/4" src={nikeAdidas} alt="" />
+              <img className="w-3/4" draggable="false" src={nikeAdidas} alt="" />
             </Box>
           </a>
           <a href="https://midnightmagic.netlify.app/" target="_blank" rel="noopener noreferrer">
             <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
-              <img className="w-3/4" src={midnightMagic} alt="" />
+              <img className="w-3/4" draggable="false" src={midnightMagic} alt="" />
             </Box>
           </a>
           <a href="https://zenitsu-parallax.netlify.app/" target="_blank" rel="noopener noreferrer">
             <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, color: "white" }}>
-              <img className="w-3/4" src={zenitsu} alt="" />
+              <img className="w-3/4" draggable="false" src={zenitsu} alt="" />
             </Box>
           </a>
         </Box>

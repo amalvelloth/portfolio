@@ -14,7 +14,7 @@ function Contact() {
             <h2 className='text-3xl font-thin'>Let's talk</h2>
           </div>
           <div className='m-2'>
-            <img className='h-auto max-w-full w-[40rem]' src="https://images.hdqwalls.com/download/blade-runner-2049-arts-s2-2560x1440.jpg" alt="" />
+            <img className='h-36 bg-cover max-w-full w-[40rem]' src="https://images.hdqwalls.com/download/blade-runner-2049-arts-s2-2560x1440.jpg" alt="" />
           </div>
         </div>
       </section>
