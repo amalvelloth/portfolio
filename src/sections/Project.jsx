@@ -71,61 +71,61 @@ function Project() {
 
   return (
     <React.Fragment>
-      <LineWrapper />
-      <Box className="gallery" sx={{ display: "flex", minHeight: "100vh", bgcolor: "black" }}>
-        {/* Left image block */}
-        <Box
-          className="leftblock"
-          sx={{
-            width: "30%",
-            height: "100vh",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "white",
-            bgcolor: "black",
-          }}
-        >
-          <div className="title p-3">
-            <h1 className="text-3xl" style={{ fontWeight: "bold" }}>Projects</h1>
-            <h1 className="text-2xl font-thin">These are my Projects</h1>
-          </div>
-        </Box>
+        <LineWrapper />
+        <Box className="gallery" sx={{ display: "flex", minHeight: "100vh", bgcolor: "black" }}>
+          {/* Left image block */}
+          <Box
+            className="leftblock"
+            sx={{
+              width: "30%",
+              height: "100vh",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "white",
+              bgcolor: "black",
+            }}
+          >
+            <div className="title p-2">
+              <h1 className="text-3xl" style={{ fontWeight: "bold" }}>Projects</h1>
+              <h1 className="text-2xl font-thin">These are my Projects</h1>
+            </div>
+          </Box>
 
-        {/* Right text block */}
-        <Box
-          className="rightblock"
-          sx={{
-            width: "70%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            ml: "auto",
-            color: "#000",
-          }}
-        >
-          <div className="hand flex justify-center border-[0.5px]">
-            <h2 className="text-sm flex items-center text-black justify-between">Live site &#8599;
-            </h2>
-          </div>
-          <a href="https://nike-adidas.netlify.app/" target="_blank" rel="noopener noreferrer">
-            <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
-              <img className="w-3/4" draggable="false" src={nikeAdidas} alt="" />
-            </Box>
-          </a>
-          <a href="https://midnightmagic.netlify.app/" target="_blank" rel="noopener noreferrer">
-            <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
-              <img className="w-3/4" draggable="false" src={midnightMagic} alt="" />
-            </Box>
-          </a>
-          <a href="https://zenitsu-parallax.netlify.app/" target="_blank" rel="noopener noreferrer">
-            <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, color: "white" }}>
-              <img className="w-3/4" draggable="false" src={zenitsu} alt="" />
-            </Box>
-          </a>
+          {/* Right text block */}
+          <Box
+            className="rightblock"
+            sx={{
+              width: "70%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              ml: "auto",
+              color: "#000",
+            }}
+          >
+            <div className="hand flex justify-center border-[0.5px]">
+              <h2 className="text-sm flex items-center text-black justify-between">Live site &#8599;
+              </h2>
+            </div>
+            <a href="https://nike-adidas.netlify.app/" target="_blank" rel="noopener noreferrer">
+              <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
+                <img className="w-3/4" draggable="false" src={nikeAdidas} alt="" />
+              </Box>
+            </a>
+            <a href="https://midnightmagic.netlify.app/" target="_blank" rel="noopener noreferrer">
+              <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, mb: 3, color: "white" }}>
+                <img className="w-3/4" draggable="false" src={midnightMagic} alt="" />
+              </Box>
+            </a>
+            <a href="https://zenitsu-parallax.netlify.app/" target="_blank" rel="noopener noreferrer">
+              <Box className="details" sx={{ fontSize: "3rem", fontWeight: 900, color: "white" }}>
+                <img className="w-3/4" draggable="false" src={zenitsu} alt="" />
+              </Box>
+            </a>
+          </Box>
         </Box>
-      </Box>
     </React.Fragment>
   );
 }

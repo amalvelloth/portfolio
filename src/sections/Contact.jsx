@@ -18,20 +18,19 @@ function Contact() {
           </div>
         </div>
         <div className="line h-[1px] my-10 w-1/2 bg-[#474747]"></div>
-        <div className="container py-12">
+        
+        <div className="container py-12 max-md:py-16">
           <div className="name w-3/4 m-auto flex justify-between items-center max-md:flex-col">
-            <div className="flex text-5xl items-center justify-center mb-4 max-md:w-full">
+            <div className="flex text-5xl items-center justify-center mb-2 max-md:mb-8 max-md:w-full">
               Amal v
             </div>
 
-            <div className="flex justify-between items-center max-md:flex-col max-md:h-[80px] w-[300px] max-md:w-[full] max-md:justify-between">
+            <div className="flex justify-between items-center max-lg:flex-col max-md:gap-10 md:gap-4 max-md:h-[80px] max-w-[400px] max-md:w-[full] max-md:justify-between">
               <div className='flex justify-between items-center w-[150px]'>
                 <a href="" className="text-white hover:underline">Linkedin</a>
                 <a href="" className="text-white hover:underline">GitHub</a>
               </div>
-              <div>
-                <a href="" className="bg-[#D6E0FF] p-4 text-black hover:underline">Let's collaborate</a>
-              </div>
+              <a href="" className="bg-[#D6E0FF] lg:ml-10 py-3 px-4 text-black hover:underline">Let's collaborate</a>
             </div>
           </div>
         </div>
