@@ -17,7 +17,7 @@ function Contact() {
             <img className='h-36 bg-cover max-w-full w-[40rem]' src="https://images.hdqwalls.com/download/blade-runner-2049-arts-s2-2560x1440.jpg" alt="" />
           </div>
         </div>
-        <div className="line h-[1px] my-10 w-4/5 bg-[#474747]"></div>
+        <div className="line h-[1px] my-10 w-4/5 mb-0 bg-[#474747]"></div>
         
         <div className="container py-12 max-md:py-16">
           <div className="name w-3/4 m-auto flex justify-between items-center max-md:flex-col">
