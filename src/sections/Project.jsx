@@ -73,17 +73,7 @@ function Project() {
       <div className="gallery flex min-h-screen bg-black">
         {/* Left image block */}
         <div
-          className="leftblock"
-          style={{
-            width: "30%",
-            height: "100vh",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "white",
-            backgroundColor: "black",
-          }}
+          className="leftblock w-[30%] h-100 flex flex-col items-center justify-center text-white bg-black"
         >
           <div className="title p-2">
             <h1 className="text-3xl" style={{ fontWeight: "bold" }}>Projects</h1>
