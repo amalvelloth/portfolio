@@ -402,8 +402,8 @@ iframe[src*="vercel"] {
 .hand {
   background-color: white;
   top: 50%;
-  width: 120px;
-  height: 30px;
+  width: 117px;
+  height: 28px;
   z-index: 9999;
   display: flex;
   justify-content: center;
