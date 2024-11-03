@@ -73,7 +73,7 @@ function Project() {
       <div className="gallery flex min-h-screen bg-black">
         {/* Left image block */}
         <div
-          className="leftblock w-[30%] h-100 flex flex-col items-center justify-center text-white bg-black"
+          className="leftblock w-[30%] h-[100vh] flex flex-col items-center justify-center text-white bg-black"
         >
           <div className="title p-2">
             <h1 className="text-3xl" style={{ fontWeight: "bold" }}>Projects</h1>
