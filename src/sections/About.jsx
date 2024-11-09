@@ -25,11 +25,11 @@ function About() {
       y: 50,
       opacity: 0,
       stagger: 0.1,
-      duration: 1, 
-      ease: 'power1.out', 
+      duration: 1,
+      ease: 'power1.out',
       scrollTrigger: {
         trigger: textRef1.current,
-        start: 'top 100%',    
+        start: 'top 100%',
         toggleActions: 'restart none reverse none',
         immediateRender: true,
       },
@@ -48,12 +48,17 @@ function About() {
         <div className="container mx-auto flex max-lg:flex-col md:justify-center">
           <div className="m-2">
             <p ref={textRef1} className="overflow-hidden">
-              I'm dedicated to crafting interactive web experiences with the MERN stack, blending 
+              I'm dedicated to crafting interactive web experiences with the MERN stack, blending
             </p>
             <p ref={textRef2} className="overflow-hidden">
               creativity and functionality to bring innovative ideas to life.
             </p>
-          </div>   
+            <div className="flex justify-between pt-32">
+              <h2>I DO</h2>
+              <h2 className='text-5xl text-[#CECECE]'>IMMERSIVE</h2>
+            </div>
+            <h2 className='text-5xl text-end'>WEBSITES</h2>
+          </div>
           <div className="m-2">
             <img
               className="h-auto max-w-full w-[40rem]"
