@@ -55,12 +55,12 @@ function About() {
               creativity and functionality to bring innovative ideas to life.
             </p>
             <div className="flex justify-end pt-32">
-              <h2 className='text-5xl'><img src={sparkle} alt="sparkle" className="inline w-9 h-9 max-md:w-6 max-md:h-6" /></h2>
-              <h2 className='text-5xl'><img src={sparkle} alt="sparkle" className="inline w-9 h-9 max-md:w-6 max-md:h-6" /></h2>
+              <h2 className='py-2'><img src={sparkle} alt="sparkle" className="inline w-9 h-9 max-md:w-6 max-md:h-6" /></h2>
+              <h2 className='py-2'><img src={sparkle} alt="sparkle" className="inline w-9 h-9 max-md:w-6 max-md:h-6" /></h2>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between font-rmneue">
               <h2 className='text-xl'>I DO</h2>
-              <h2 className='text-5xl text-[#CECECE] font-rmneue'>IMME<span className='font-gridular'>R</span>SIVE</h2>
+              <h2 className='text-5xl text-[#CECECE]'>IMME<span className='font-gridular'>R</span>SIVE</h2>
             </div>
             <h2 className='text-5xl text-end font-rmneue'>WEBSITES</h2>
 

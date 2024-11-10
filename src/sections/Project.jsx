@@ -5,6 +5,7 @@ import LineWrapper from "../components/LineWrapper";
 import nikeAdidas from "../assets/images/nikeAdidas.png";
 import midnightMagic from "../assets/images/midnightMagic.png";
 import zenitsu from "../assets/images/zenitsu.png";
+import urcristiano from "../assets/images/RonaldoSite.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -110,6 +111,14 @@ function Project() {
             <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold">
               <div className="box w-3/4 max-md:w-full max-md:px-2">
                 <img className="w-full" draggable="false" src={zenitsu} alt="Zenitsu Parallax Project" />
+                <p className="text-sm font-thin">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia tenetur praesentium eveniet distinctio dolores tempora odio animi est dolor voluptate ex</p>
+              </div>
+            </div>
+          </a>
+          <a href="https://ronaldo7site.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold">
+              <div className="box w-3/4 max-md:w-full max-md:px-2">
+                <img className="w-full" draggable="false" src={urcristiano} alt="Zenitsu Parallax Project" />
                 <p className="text-sm font-thin">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia tenetur praesentium eveniet distinctio dolores tempora odio animi est dolor voluptate ex</p>
               </div>
             </div>
