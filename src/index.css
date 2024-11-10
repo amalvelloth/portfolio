@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
   font-family: "Dimentions";
-  src: url(assets/fonts/Dimensions300.ttf) format("opentype");
+  src: url("assets/fonts/Dimensions300.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +25,12 @@
 @font-face {
   font-family: "Gridular";
   src: url("assets/fonts/Gridular-Regular.otf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pptelegraf";
+  src: url("assets/fonts/PPTelegraf-Regular.otf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }

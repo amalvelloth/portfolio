@@ -25,13 +25,13 @@ export default {
 
       fontFamily: {
         Dimentions: ["Dimentions", "sans-serif"],
+        smallestpixel : ["SmallestPixel", "sans-serif"],
+        HelveticaNowDisplayMedium : ["HelveticaNowDisplayMedium", "sans-serif"],
+        gridular : ['Gridular', 'sans-serif'],
+        rmneue : ['RmNeue', 'sans-serif'],
+        pptelegraf : ['Pptelegraf', 'sans-serif'],
       },
-      fontFamily: {
-        "smallest-pixel": ["SmallestPixel", "sans-serif"],
-      },
-      fontFamily: {
-        HelveticaNowDisplayMedium: ["HelveticaNowDisplayMedium", "sans-serif"],
-      },
+
 
       screens: {
         "max-sm": { max: "640px" },
