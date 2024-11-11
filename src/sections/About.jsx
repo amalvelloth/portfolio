@@ -55,8 +55,7 @@ function About() {
           muted 
           src={space} 
           className="absolute top-0 left-0 w-full h-full object-cover opacity-50" 
-        />
-        
+        />        
         {/* Overlay Content */}
         <div className="container relative mx-auto flex max-lg:flex-col md:justify-center z-10">
           <div className="m-2 overflow-hidden">
