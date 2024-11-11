@@ -92,26 +92,29 @@ function Project() {
             </h2>
           </div>
           <a href="https://nike-adidas.netlify.app/" target="_blank" rel="noopener noreferrer">
-            <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold mb-3">
+            <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold max-md:mb-3">
               <div className="box w-3/4 max-md:w-full max-md:px-2">
                 <img className="w-full" draggable="false" src={nikeAdidas} alt="Nike Adidas Project" />
-                <p className="text-sm font-thin">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia tenetur praesentium eveniet distinctio dolores tempora odio animi est dolor voluptate ex</p>
+                <h2 className="text-2xl font-rmneue mt-3 font-thin">Nike x Adidas</h2>
+                <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">An elegant Nike x Adidas eCommerce concept site showcasing modern sportswear collections with a sleek, user-friendly design</p>
               </div>
             </div>
           </a>
           <a href="https://midnightmagic.netlify.app/" target="_blank" rel="noopener noreferrer">
-            <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold mb-3">
+            <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold max-md:mb-3">
               <div className="box w-3/4 max-md:w-full max-md:px-2">
                 <img className="w-full" draggable="false" src={midnightMagic} alt="Midnight Magic Project" />
-                <p className="text-sm font-thin">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia tenetur praesentium eveniet distinctio dolores tempora odio animi est dolor voluptate ex</p>
+                <h2 className="text-2xl font-rmneue mt-3 font-thin">Event Management </h2>
+                <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">Freelance landing page project designed to captivate users with a sleek, mysterious aesthetic and engaging experience</p>
               </div>
             </div>
           </a>
           <a href="https://zenitsu-parallax.netlify.app/" target="_blank" rel="noopener noreferrer">
-            <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold">
+            <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold max-md:mb-3">
               <div className="box w-3/4 max-md:w-full max-md:px-2">
                 <img className="w-full" draggable="false" src={zenitsu} alt="Zenitsu Parallax Project" />
-                <p className="text-sm font-thin">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia tenetur praesentium eveniet distinctio dolores tempora odio animi est dolor voluptate ex</p>
+                <h2 className="text-2xl font-rmneue mt-3 font-thin">Parallax</h2>
+                <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">This Parallax project leverages JavaScript-driven animations and parallax scrolling to create an interactive, anime-inspired experience around Zenitsu Agatsuma.</p>
               </div>
             </div>
           </a>
@@ -119,7 +122,8 @@ function Project() {
             <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold">
               <div className="box w-3/4 max-md:w-full max-md:px-2">
                 <img className="w-full" draggable="false" src={urcristiano} alt="Zenitsu Parallax Project" />
-                <p className="text-sm font-thin">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia tenetur praesentium eveniet distinctio dolores tempora odio animi est dolor voluptate ex</p>
+                <h2 className="text-2xl font-rmneue mt-3 font-thin">GSAP</h2>
+                <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">Used GSAP JavaScript library to create smooth animations and interactive effects, enhancing the visual appeal and user engagement with dynamic motion elements</p>
               </div>
             </div>
           </a>

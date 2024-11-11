@@ -31,7 +31,7 @@ function About() {
       scrollTrigger: {
         trigger: textRef1.current,
         start: 'top 100%',
-        toggleActions: 'restart none reverse none',
+        toggleActions: 'restart none play none',
         immediateRender: true,
       },
     });

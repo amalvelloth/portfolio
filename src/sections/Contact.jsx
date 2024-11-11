@@ -20,9 +20,9 @@ function Contact() {
         <div className="line h-[1px] my-10 w-4/5 mb-0 bg-[#474747]"></div>
         
         <div className="container py-12 max-md:py-16">
-          <div className="name w-3/4 m-auto flex justify-between items-center max-md:flex-col">
-            <div className="flex text-5xl items-center justify-center mb-2 max-md:mb-8 max-md:w-full">
-              Amal v
+          <div className="name w-3/4 m-auto flex justify-between items-center max-md:flex-col font-pptelegraf">
+            <div className="flex text-5xl items-center justify-center max-md:mb-8 max-md:w-full mb-0">
+              AMAL V
             </div>
 
             <div className="flex justify-between items-center max-lg:flex-col max-md:gap-10 md:gap-4 max-md:h-[80px] max-w-[400px] max-md:w-[full] max-md:justify-between">
