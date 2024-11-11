@@ -6,6 +6,8 @@ import nikeAdidas from "../assets/images/nikeAdidas.png";
 import midnightMagic from "../assets/images/midnightMagic.png";
 import zenitsu from "../assets/images/zenitsu.png";
 import urcristiano from "../assets/images/RonaldoSite.png"
+import space from '../assets/spacetravel.mp4';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,8 +88,8 @@ function Project() {
 
         {/* Right text block */}
         <div className="rightblock w-2/3 max-md:w-full flex flex-col justify-center ml-auto">
-          <div className="hand flex justify-center border border-gray-400 p-2">
-            <h2 className="text-sm flex items-center text-black">
+          <div className="hand flex justify-center p-1">
+            <h2 className="text-sm flex font-thin font-gridular items-center text-black">
               Live site &#8599;
             </h2>
           </div>
@@ -114,7 +116,7 @@ function Project() {
               <div className="box w-3/4 max-md:w-full max-md:px-2">
                 <img className="w-full" draggable="false" src={zenitsu} alt="Zenitsu Parallax Project" />
                 <h2 className="text-2xl font-rmneue mt-3 font-thin">Parallax</h2>
-                <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">This Parallax project leverages JavaScript-driven animations and parallax scrolling to create an interactive, anime-inspired experience around Zenitsu Agatsuma.</p>
+                <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">This project leverages JavaScript-driven animations and parallax scrolling to create an interactive, anime-inspired experience around Zenitsu Agatsuma.</p>
               </div>
             </div>
           </a>

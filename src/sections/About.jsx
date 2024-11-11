@@ -2,9 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import SplitType from 'split-type';
 import gsap from 'gsap';
 import LineWrapper from '../components/LineWrapper';
-import sparkle from '../assets/sparkle.svg'
+import sparkle from '../assets/sparkle.svg';
+import space from '../assets/spacetravel.mp4';
 
-gsap.registerPlugin(ScrollTrigger); // Ensure this is registered once at the top
+gsap.registerPlugin(ScrollTrigger);
 
 function About() {
   const textRef1 = useRef(null);
@@ -45,9 +46,20 @@ function About() {
   return (
     <>
       <LineWrapper />
-      <section id="about" className="h-full py-14 md:px-8 bg-black text-white flex items-center">
-        <div className="container mx-auto flex max-lg:flex-col md:justify-center">
-          <div className="m-2">
+      <section id="about" className="relative h-full py-14 md:px-8 bg-black text-white flex items-center">
+        
+        {/* Background Video */}
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          src={space} 
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-50" 
+        />
+        
+        {/* Overlay Content */}
+        <div className="container relative mx-auto flex max-lg:flex-col md:justify-center z-10">
+          <div className="m-2 overflow-hidden">
             <p ref={textRef1} className="overflow-hidden font-pptelegraf">
               I'm dedicated to crafting interactive web experiences with the MERN stack, blending
             </p>
@@ -63,7 +75,6 @@ function About() {
               <h2 className='text-5xl text-[#CECECE]'>IMME<span className='font-gridular'>R</span>SIVE</h2>
             </div>
             <h2 className='text-5xl text-end font-rmneue'>WEBSITES</h2>
-
           </div>
           <div className="m-2">
             <img

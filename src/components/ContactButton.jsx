@@ -10,8 +10,11 @@ function ContactButton() {
   };
 
   const handleScroll = () => {
-    // Check if the scroll position is more than 50% of the viewport height
-    if (window.scrollY > window.innerHeight * 0.6) {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    // Toggle visibility based on a scroll threshold (e.g., 60% of viewport height)
+    if (scrollPosition > windowHeight * 0.55) {
       setIsVisible(false);
     } else {
       setIsVisible(true);
@@ -28,14 +31,13 @@ function ContactButton() {
   }, []);
 
   return (
-    isVisible && (
-      <button
-        className="z-0 pulse-shadow hover:cursor m-4 fixed rounded-full right-4 bottom-4 w-24 h-24 md:w-32 md:h-32 flex items-center justify-center text-white bg-black border border-white"
-        onClick={handleNavigation}
-      >
-        <h2 className='text-sm'>CONTACT</h2>
-      </button>
-    )
+    <button
+      style={{ opacity: isVisible ? 1 : 0, transition: 'opacity 0.2s ease-out' }}
+      className="z-0 pulse-shadow hover:cursor m-4 fixed rounded-full right-4 bottom-4 w-24 h-24 md:w-32 md:h-32 flex items-center justify-center text-white bg-black border border-white"
+      onClick={handleNavigation}
+    >
+      <h2 className="text-sm">CONTACT</h2>
+    </button>
   );
 }
 

@@ -4,6 +4,7 @@ import SplitType from 'split-type';
 import BurgerMenu from '../components/BurgerMenu';
 import blackSpace from '../assets/black_space.mp4';
 
+
 function Hero() {
     const titleRef = useRef(null);
 
