@@ -425,3 +425,21 @@ iframe[src*="vercel"] {
 
 
 /* mobile menu navbar */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform-origin: top;
+  background-color: black;
+  overflow: hidden;
+  z-index: 40;
+}
+
+
+
+.menu.open {
+    pointer-events: auto; /* Enable menu interaction when open */
+}

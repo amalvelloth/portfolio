@@ -11,6 +11,12 @@ function BurgerMenu() {
         setIsActive(!isActive);
     };
 
+    //to hide scroll bar
+    useEffect(() => {
+        document.body.style.overflow = isActive ? 'hidden' : 'auto';
+    }, [isActive]);
+
+
     useEffect(() => {
         if (isActive) {
             // Animate overlay quickly first
@@ -66,26 +72,26 @@ function BurgerMenu() {
             {/* Black Overlay */}
             <div
                 ref={overlayRef}
-                className="overlay fixed inset-0 bg-black z-40 scale-y-0 transition-transform duration-300"
+                className="overlay  inset-0 z-40 scale-y-0 transition-transform duration-300"
                 style={{ transformOrigin: 'top' }}
             >
             </div>
 
             {/* Mobile navbar menu */}
-            <div ref={menuRef} className={`menu ${isActive ? 'open' : ''} z-50`}>
-                <div className="primary-menu">
+            <div ref={menuRef} className={`menu fixed w-screen h-screen flex items-center justify-center overflow-hidden z-50 pointer-events-none ${isActive ? 'open' : ''} z-50`}>
+                <div className="primary-menu absolute left-0 m-4">
                     <div className="menu-container">
-                        <div className="wrapper text-5xl absolute">
-                            <div className="menu-item">
-                                <a href="#"><span>I</span> About</a>
+                        <div className="wrapper text-5xl">
+                            <div className="menu-item space-y-4">
+                                <a href="#"><span>I</span> <span className='font-gridular'>H</span>O<span className='font-gridular'>M</span>E</a>
                                 <div className="menu-item-revealer"></div>
                             </div>
-                            <div className="menu-item">
-                                <a href="#"><span>II</span> Work</a>
+                            <div className="menu-item space-y-4">
+                                <a href="#"><span>II</span> <span className='font-gridular'>A</span>BOU<span className='font-gridular'>T</span></a>
                                 <div className="menu-item-revealer"></div>
                             </div>
-                            <div className="menu-item">
-                                <a href="#"><span>III</span> Contact</a>
+                            <div className="menu-item space-y-4">
+                                <a href="#"><span>III</span> C<span className='font-gridular'>ON</span>TACT</a>
                                 <div className="menu-item-revealer"></div>
                             </div>
                         </div>
