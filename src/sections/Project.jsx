@@ -85,7 +85,9 @@ function Project() {
           muted
           playsInline
         />
-        
+        {/* Side Borders */}
+        <div className="fixed lg:block hidden left-[1.4rem] top-[1.4rem] h-screen w-[1px] bg-[#474747] z-20"></div>
+            <div className="fixed lg:block hidden right-[1.4rem] top-[1.4rem] bottom-[2rem] h-[100%] w-[1px] bg-[#474747] z-20"></div>
         {/* Overlay content */}
         <div className="gallery flex max-md:flex-col min-h-screen relative z-10 bg-black bg-opacity-50">
           {/* Left image block */}

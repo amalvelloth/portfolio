@@ -12,21 +12,29 @@ function About() {
   const textRef2 = useRef(null);
 
   useEffect(() => {
+    // Determine if the screen width is small
+    const isSmallScreen = window.innerWidth < 768;
+
+    // Set SplitType based on screen size
     const split1 = new SplitType(textRef1.current, {
       types: 'lines',
       tagName: 'span',
+      // Increase the number of lines for smaller screens if needed
+      lineClass: isSmallScreen ? 'small-line' : 'line',
     });
     const split2 = new SplitType(textRef2.current, {
       types: 'lines',
       tagName: 'span',
+      lineClass: isSmallScreen ? 'small-line' : 'line',
     });
 
     const allLines = [...split1.lines, ...split2.lines];
 
+    // GSAP animation settings
     gsap.from(allLines, {
-      y: 50,
+      y: isSmallScreen ? 30 : 50, // Smaller offset for smaller screens
       opacity: 0,
-      stagger: 0.1,
+      stagger: isSmallScreen ? 0.08 : 0.1, // Adjust stagger timing
       duration: 1,
       ease: 'power1.out',
       scrollTrigger: {
@@ -37,6 +45,7 @@ function About() {
       },
     });
 
+    // Cleanup function
     return () => {
       split1.revert();
       split2.revert();
