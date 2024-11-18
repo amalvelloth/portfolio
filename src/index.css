@@ -324,25 +324,22 @@ iframe[src*="vercel"] {
 @keyframes pulse-shadow {
   0%,
   100% {
-    box-shadow: inset 0 0 15px 5px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 15px 5px #8e8f8f;
   }
-  /* 50% {
-    box-shadow: inset 0 0 25px 10px rgba(255, 255, 255, 0.5);
-  } */
 }
 
 @keyframes hover-shadow {
   0%,
   100% {
-    box-shadow: inset 0 0 15px 5px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 15px 5px #8e8f8f;
   }
   50% {
-    box-shadow: inset 0 0 30px 15px rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0 0 30px 15px #8e8f8f;
   }
 }
 
 .pulse-shadow {
-  animation: pulse-shadow 2s infinite ease-in-out;
+  animation: pulse-shadow 2.5s infinite ease-in-out;
   transition: box-shadow 0.5s ease; /* Optional transition for smoothness */
 }
 

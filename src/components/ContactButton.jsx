@@ -33,8 +33,8 @@ function ContactButton() {
   return (
     <button
       style={{ opacity: isVisible ? 1 : 0, transition: 'opacity 0.2s ease-out' }}
-      className="z-50 pulse-shadow hover:cursor m-4 fixed rounded-full right-4 bottom-4 w-24 h-24 md:w-32 md:h-32 flex items-center justify-center text-white bg-black border border-white"
-      onClick={handleNavigation}
+      className="z-50 pulse-shadow hover:cursor m-4 fixed rounded-full right-4 bottom-4 w-24 h-24 md:w-32 md:h-32 flex items-center justify-center text-white bg-black border-[0.5px] border-[#9D9C9A]"
+      onClick={handleNavigation} 
     >
       <h2 className="text-sm">CONTACT</h2>
     </button>

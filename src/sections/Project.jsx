@@ -109,7 +109,7 @@ function Project() {
               <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold max-md:mb-3">
                 <div className="box w-3/4 max-md:w-full max-md:px-2">
                   <img className="w-full" draggable="false" src={nikeAdidas} alt="Nike Adidas Project" />
-                  <h2 className="text-2xl font-rmneue mt-3 font-thin">Nike x Adidas</h2>
+                  <h2 className="text-2xl font-rmneue mt-3 font-thin flex items-center justify-between">Nike x Adidas <span className="font-pptelegraf text-[12px] text-[#6A6A6A]">APR 2024</span></h2>
                   <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">An elegant Nike x Adidas eCommerce concept site showcasing modern sportswear collections with a sleek, user-friendly design</p>
                 </div>
               </div>
@@ -118,7 +118,7 @@ function Project() {
               <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold max-md:mb-3">
                 <div className="box w-3/4 max-md:w-full max-md:px-2">
                   <img className="w-full" draggable="false" src={midnightMagic} alt="Midnight Magic Project" />
-                  <h2 className="text-2xl font-rmneue mt-3 font-thin">Event Management</h2>
+                  <h2 className="text-2xl font-rmneue mt-3 font-thin flex items-center justify-between">Event Management <span className="font-pptelegraf text-[12px] text-[#6A6A6A]">APR 2024</span></h2>
                   <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">Freelance landing page project designed to captivate users with a sleek, mysterious aesthetic and engaging experience</p>
                 </div>
               </div>
@@ -127,7 +127,7 @@ function Project() {
               <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold max-md:mb-3">
                 <div className="box w-3/4 max-md:w-full max-md:px-2">
                   <img className="w-full" draggable="false" src={zenitsu} alt="Zenitsu Parallax Project" />
-                  <h2 className="text-2xl font-rmneue mt-3 font-thin">Parallax</h2>
+                  <h2 className="text-2xl font-rmneue mt-3 font-thin flex items-center justify-between">Parallax <span className="font-pptelegraf text-[12px] text-[#6A6A6A]">AUG 2024</span></h2>
                   <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">This project leverages JavaScript-driven animations and parallax scrolling to create an interactive, anime-inspired experience around Zenitsu Agatsuma.</p>
                 </div>
               </div>
@@ -136,7 +136,7 @@ function Project() {
               <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold">
                 <div className="box w-3/4 max-md:w-full max-md:px-2">
                   <img className="w-full" draggable="false" src={urcristiano} alt="Ronaldo Project" />
-                  <h2 className="text-2xl font-rmneue mt-3 font-thin">GSAP</h2>
+                  <h2 className="text-2xl font-rmneue mt-3 font-thin flex items-center justify-between">GSAP <span className="font-pptelegraf text-[12px] text-[#6A6A6A]">SEPT 2024</span></h2>
                   <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">Used GSAP JavaScript library to create smooth animations and interactive effects, enhancing the visual appeal and user engagement with dynamic motion elements</p>
                 </div>
               </div>

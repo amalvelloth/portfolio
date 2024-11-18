@@ -87,12 +87,12 @@ function BurgerMenu() {
                                 <div className="menu-item-revealer"></div>
                                 <img src="https://cdn.prod.website-files.com/64354a08ff4dd15c2539372b/66c89bf137b40ad0731f77f3_Line%20191%20(Stroke)-1.png" alt="" />
                             </div>
-                            <div className="menu-item mt-3 space-y-4 text-[#9D9C9A] hover:text-white font-rmneue">
+                            <div className="menu-item mt-4 space-y-4 text-[#9D9C9A] hover:text-white font-rmneue">
                                 <a href="#"><span className='font-Dimentions'>I I</span> <span className='font-gridular'>A</span>BOU<span className='font-gridular'>T</span></a>
                                 <div className="menu-item-revealer"></div>
                                 <img src="https://cdn.prod.website-files.com/64354a08ff4dd15c2539372b/66c89bf1a3eb973454347614_Line%20192%20(Stroke).png" alt="" />
                             </div>
-                            <div className="menu-item mt-3 space-y-4 text-[#9D9C9A] hover:text-white font-rmneue">
+                            <div className="menu-item mt-4 space-y-4 text-[#9D9C9A] hover:text-white font-rmneue">
                                 <a href="#"><span className='font-Dimentions'>I I I</span> C<span className='font-gridular'>ON</span>TACT</a>
                                 <div className="menu-item-revealer"></div>
                                 <div className="h-[1px] w-full bg-[#474747]"></div>
