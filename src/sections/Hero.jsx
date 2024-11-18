@@ -27,10 +27,10 @@ function Hero() {
     return (
         <section
             id='home'
-            className="relative flex flex-col items-center md:py-10 min-h-screen w-full bg-black text-white overflow-hidden"
+            className="relative flex flex-col items-center md:py-10 min-h-screen w-full text-white overflow-hidden"
         >
             {/* Background Video */}
-            <video
+            {/* <video
                 className="absolute top-0 left-0 w-full h-full object-cover z-0"
                 src={space}
                 type="video/mp4"
@@ -40,7 +40,7 @@ function Hero() {
                 loop
             >
                 Your browser does not support the video tag.
-            </video>
+            </video> */}
 
             {/* Side Borders */}
             <div className="fixed lg:block hidden left-[1.4rem] top-[1.4rem] h-screen w-[1px] bg-[#474747] z-10"></div>

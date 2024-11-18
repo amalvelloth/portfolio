@@ -6,9 +6,9 @@ function Contact() {
   return (
     <>
       <LineWrapper />
-      <section id='contact' className="h-full relative py-14 bg-black text-white flex flex-col items-center overflow-hidden">
+      <section id='contact' className="h-full relative py-14 text-white flex flex-col items-center overflow-hidden">
         {/* Background Video */}
-        <video
+        {/* <video
           autoPlay
           loop
           muted
@@ -16,7 +16,7 @@ function Contact() {
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
           <source src={space} type="video/mp4" />
-        </video>
+        </video> */}
 
         {/* Content Wrapper */}
         <div className="relative z-10 container max-lg:flex-col mx-auto flex md:justify-center">

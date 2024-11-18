@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ContactButton from './ContactButton';
 import { gsap } from 'gsap';
+import { Link } from 'react-router-dom';
+import About from '../sections/About';
+import Contact from '../sections/Contact';
 
 function BurgerMenu() {
     const [isActive, setIsActive] = useState(false);
@@ -30,7 +33,7 @@ function BurgerMenu() {
                     gsap.fromTo(
                         menuRef.current.querySelectorAll('.menu-item'),
                         { opacity: 0, y: 50 },
-                        { opacity: 1, y: 0, stagger: 0.1, delay: 0.1, ease: "power2.out" }
+                        { opacity: 1, y: 0, stagger: 0.1, delay: 0.5, ease: "power2.out" }
                     );
                 }
             });
@@ -82,20 +85,31 @@ function BurgerMenu() {
                 <div className="primary-menu absolute left-0 m-4">
                     <div className="menu-container">
                         <div className="wrapper text-5xl">
-                            <div className="menu-item space-y-4 font-rmneue">
-                                <a href="#"><span className='font-Dimentions'>I</span> <span className='font-gridular'>H</span>O<span className='font-gridular'>M</span>E</a>
+                            <div className="menu-item space-y-4 font-rmneue overflow-hidden">
+                                <Link to={About} onClick={handleToggle}><span className='font-Dimentions overflow-hidden'>I</span> <span className='font-gridular'>H</span>O<span className='font-gridular'>M</span>E
+                                </Link>
                                 <div className="menu-item-revealer"></div>
                                 <img src="https://cdn.prod.website-files.com/64354a08ff4dd15c2539372b/66c89bf137b40ad0731f77f3_Line%20191%20(Stroke)-1.png" alt="" />
                             </div>
                             <div className="menu-item mt-4 space-y-4 text-[#9D9C9A] hover:text-white font-rmneue">
-                                <a href="#"><span className='font-Dimentions'>I I</span> <span className='font-gridular'>A</span>BOU<span className='font-gridular'>T</span></a>
+                                <Link to={About} onClick={handleToggle}> <span className='font-Dimentions overflow-hidden'>
+                                    I I</span> <span className='font-gridular'>A</span>BOU<span className='font-gridular'>T</span>
+                                </Link>
                                 <div className="menu-item-revealer"></div>
                                 <img src="https://cdn.prod.website-files.com/64354a08ff4dd15c2539372b/66c89bf1a3eb973454347614_Line%20192%20(Stroke).png" alt="" />
                             </div>
                             <div className="menu-item mt-4 space-y-4 text-[#9D9C9A] hover:text-white font-rmneue">
-                                <a href="#"><span className='font-Dimentions'>I I I</span> C<span className='font-gridular'>ON</span>TACT</a>
+                                <Link to={About} onClick={handleToggle}> <span className='font-Dimentions overflow-hidden'>
+                                    I I</span> <span className='font-gridular'>W</span>ORK<span className='font-gridular'>S</span>
+                                </Link>
                                 <div className="menu-item-revealer"></div>
-                                <div className="h-[1px] w-full bg-[#474747]"></div>
+                                <img src="https://cdn.prod.website-files.com/64354a08ff4dd15c2539372b/66c89bf13c34b5da15825da4_Line%20193%20(Stroke).png" alt="" />
+                            </div>
+                            <div className="menu-item mt-4 space-y-4 text-[#9D9C9A] hover:text-white font-rmneue">
+                                <Link to={Contact} onClick={handleToggle}><span className='font-Dimentions overflow-hidden'>I I I</span> C<span className='font-gridular'>ON</span>TACT
+                                </Link>
+                                <div className="menu-item-revealer"></div>
+                                <div className="h-[0.5px] w-full bg-[#474747]"></div>
                             </div>
                         </div>
                     </div>

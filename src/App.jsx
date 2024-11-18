@@ -10,6 +10,7 @@ import Contact from './sections/Contact';
 import LetsTalk from './components/LetsTalk';
 import ContactPage from './page/ContactPage';
 import transition from './transition';
+import VideoBackground from './components/VideoBackground'; // Import VideoBackground
 
 const AnimatedContactPage = transition(ContactPage);
 
@@ -60,6 +61,7 @@ function App() {
 
   return (
     <Router>
+      <VideoBackground /> {/* Add VideoBackground here to display it behind all content */}
       <Header />
       <AnimatedRoutes />
       <Footer />
