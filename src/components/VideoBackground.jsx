@@ -6,7 +6,7 @@ function VideoBackground() {
     return (
         <div className="fixed top-0 left-0 w-screen h-screen overflow-hidden -z-10 ">
             <video
-                className="absolute top-0 left-0 w-full h-full object-cover "
+                className="absolute top-0 left-0 w-full h-full object-cover"
                 src={space}
                 type="video/mp4"
                 playsInline
@@ -16,6 +16,7 @@ function VideoBackground() {
             >
                 Your browser does not support the video tag.
             </video>
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
         </div>
         
     )
