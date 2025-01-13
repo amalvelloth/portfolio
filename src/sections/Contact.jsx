@@ -44,8 +44,8 @@ function Contact() {
             </div>
             <div className="flex justify-between items-center max-lg:flex-col max-md:gap-10 md:gap-4 max-md:h-[80px] max-w-[400px] max-md:w-full max-md:justify-between">
               <div className='flex justify-between items-center w-[150px]'>
-                <a href="" className="text-white hover:underline">Linkedin</a>
-                <a href="" className="text-white hover:underline">GitHub</a>
+                <a href="https://www.linkedin.com/in/amal-v-354356310/" className="text-white hover:underline">Linkedin</a>
+                <a href="github.com/amalvelloth" className="text-white hover:underline">GitHub</a>
               </div>
               <a href="" className="bg-[#D6E0FF] lg:ml-10 py-3 px-4 text-black hover:underline">Let's collaborate</a>
             </div>
