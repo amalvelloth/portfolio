@@ -12,14 +12,15 @@ function ContactButton() {
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
-
-    // Toggle visibility based on a scroll threshold (e.g., 60% of viewport height)
-    if (scrollPosition > windowHeight * 0.55) {
+    const isMobile = window.innerWidth <= 768;
+    const scrollThreshold = isMobile ? 0.80 : 0.60;
+    if (scrollPosition > windowHeight * scrollThreshold) {
       setIsVisible(false);
     } else {
       setIsVisible(true);
     }
-  };
+  }
+
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);

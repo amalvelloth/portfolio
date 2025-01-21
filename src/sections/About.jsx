@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import LineWrapper from '../components/LineWrapper';
 import sparkle from '../assets/sparkle.svg';
 import space from '../assets/spacetravel.mp4';
+import workingImg from '../assets/working.jpg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -74,7 +75,7 @@ function About() {
             <p ref={textRef2} className="overflow-hidden font-pptelegraf">
               creativity and functionality to bring innovative ideas to life.
             </p>
-            <div className="flex justify-end pt-32">
+            <div className="flex justify-end pt-16">
               <h2 className='py-2'><img src={sparkle} alt="sparkle" className="inline w-9 h-9 max-md:w-6 max-md:h-6" /></h2>
               <h2 className='py-2'><img src={sparkle} alt="sparkle" className="inline w-9 h-9 max-md:w-6 max-md:h-6" /></h2>
             </div>
@@ -87,7 +88,7 @@ function About() {
           <div className="m-2">
             <img
               className="h-auto max-w-full w-[40rem]"
-              src="https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/04/ana-de-armas-blade-runner-2049.jpeg"
+              src={workingImg}
               alt=""
             />
           </div>
