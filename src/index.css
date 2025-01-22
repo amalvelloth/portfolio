@@ -34,6 +34,13 @@
   font-weight: 100;
   font-style: normal;
 }
+@font-face {
+  font-family: "SuisseIntlMono";
+  src: url("assets/fonts/Suisse-Intl-Mono.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 * {
   padding: 0;

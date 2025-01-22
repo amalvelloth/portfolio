@@ -30,6 +30,7 @@ export default {
         gridular : ['Gridular', 'sans-serif'],
         rmneue : ['RmNeue', 'sans-serif'],
         pptelegraf : ['Pptelegraf', 'sans-serif'],
+        suisseintlmono : ["SuisseIntlMono", "sans-serif"]
       },
 
       screens: {
