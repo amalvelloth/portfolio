@@ -1,6 +1,7 @@
 import React from 'react';
 import { GoArrowRight } from "react-icons/go";
 import BurgerMenu from '../components/BurgerMenu';
+import Swal from 'sweetalert2';
 
 function ContactPage() {
   const [result, setResult] = React.useState("");
@@ -20,8 +21,11 @@ function ContactPage() {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
+      Swal.fire({
+        title: "Success!",
+        text: "Message sent successfully!",
+        icon: "success"
+      });
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -53,52 +57,52 @@ function ContactPage() {
                   type="text"
                   name="firstName"
                   required
-                  className="w-full placeholder:text-black text-black font-suisseintlmono bg-transparent border-b border-dashed border-black pt-4 pb-2 text-[12px] focus:outline-none"
+                  className="w-full placeholder:text-black text-black font-suisseintlmono bg-transparent border-b border-dashed border-gray-400 pt-4 pb-2 text-[12px] focus:outline-none"
                   placeholder="First Name*"
                 />
               </div>
-              <div className="relative pt-3 flex flex-col">
+              <div className="relative pt-8 flex flex-col">
                 <input
                   type="text"
                   name="lastName"
                   required
-                  className="w-full placeholder:text-black text-black font-suisseintlmono bg-transparent border-b border-dashed border-black pt-4 pb-2 text-[12px] focus:outline-none"
+                  className="w-full placeholder:text-black text-black font-suisseintlmono bg-transparent border-b border-dashed border-gray-400 pt-4 pb-2 text-[12px] focus:outline-none"
                   placeholder="Last Name*"
                 />
               </div>
-              <div className="relative pt-3 flex flex-col">
+              <div className="relative pt-8 flex flex-col">
                 <input
                   type="tel"
                   name="phone"
                   required
-                  className="w-full placeholder:text-black text-black font-suisseintlmono bg-transparent border-b border-dashed border-black pt-4 pb-2 text-[12px] focus:outline-none"
+                  className="w-full placeholder:text-black text-black font-suisseintlmono bg-transparent border-b border-dashed border-gray-400 pt-4 pb-2 text-[12px] focus:outline-none"
                   placeholder="Phone Number*"
                 />
               </div>
-              <div className="relative pt-3 flex flex-col">
+              <div className="relative pt-8 flex flex-col">
                 <input
                   type="text"
                   name="email"
                   required
-                  className="w-full placeholder:text-black text-black font-suisseintlmono bg-transparent border-b border-dashed border-black pt-4 pb-2 text-[12px] focus:outline-none"
+                  className="w-full placeholder:text-black text-black font-suisseintlmono bg-transparent border-b border-dashed border-gray-400 pt-4 pb-2 text-[12px] focus:outline-none"
                   placeholder="Email*"
                 />
               </div>
-              <div className="relative pt-3 flex flex-col">
+              <div className="relative pt-8 flex flex-col">
                 <textarea
-                  className="w-full placeholder:text-black text-black font-suisseintlmono bg-transparent border-b border-dashed border-black pt-4 pb-1 text-[12px] focus:outline-none"
+                  className="w-full placeholder:text-black text-black font-suisseintlmono bg-transparent border-b border-dashed border-gray-400 pt-4 pb-1 text-[12px] focus:outline-none"
                   placeholder="Message*"
                   name="message"
                   required
                   rows="5"
                 />
               </div>
-              <div className="mt-8">
+              <div className="mt-8 text-start">
                 <button
                   type="submit"
-                  className="mb-20 border-2 border-black font-suisseintlmono py px-6 text-lg uppercase tracking-wide text-black hover:bg-black hover:text-white transition"
+                  className="mb-20 border border-black font-suisseintlmono py-2 px-12 text-[12px] uppercase tracking-wide text-black hover:bg-black hover:text-white transition"
                 >
-                  Transmit
+                  Send message
                 </button>
               </div>
             </form>
