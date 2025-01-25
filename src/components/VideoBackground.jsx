@@ -39,7 +39,7 @@ function VideoBackground() {
             >
                 Your browser does not support the video tag.
             </video>
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-55"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[57%]"></div>
         </div>
     );
 }

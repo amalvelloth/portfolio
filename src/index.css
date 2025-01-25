@@ -411,7 +411,7 @@ iframe[src*="vercel"] {
 
 .hand {
   background-color: white;
-  top: 50%;
+  clip-path: polygon(100% 0, 100% 45%, 85% 100%, 0 100%, 0 0);
   width: 117px;
   height: 28px;
   z-index: 9999;
