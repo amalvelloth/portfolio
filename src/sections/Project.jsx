@@ -100,7 +100,7 @@ function Project() {
 
           {/* Right text block */}
           <div className="rightblock w-2/3 max-md:w-full flex flex-col justify-center ml-auto">
-            <div className="hand flex justify-center p-1">
+            <div className="hand flex justify-center p-1 pb-2">
               <h2 className="text-sm flex font-thin font-gridular items-center text-black">
                 Live site &#8599;
               </h2>
