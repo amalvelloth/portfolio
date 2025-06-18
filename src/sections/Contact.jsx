@@ -35,7 +35,7 @@ function Contact() {
 
         {/* Divider Line */}
         <div className="relative z-10 line h-[1px] my-10 w-4/5 mb-0 bg-[#474747]"></div>
-        
+
         {/* Contact Information */}
         <div className="relative z-10 container py-12 max-md:py-16">
           <div className="name w-3/4 m-auto flex justify-between items-center max-md:flex-col font-pptelegraf">
@@ -43,9 +43,10 @@ function Contact() {
               AMAL V
             </div>
             <div className="flex justify-between items-center max-lg:flex-col max-md:gap-10 md:gap-4 max-md:h-[80px] max-w-[400px] max-md:w-full max-md:justify-between">
-              <div className='flex justify-between items-center w-[150px]'>
+              <div className='flex justify-between items-center w-full'>
                 <a href="https://www.linkedin.com/in/amal-v-354356310/" className="text-white hover:underline">Linkedin</a>
                 <a href="https://github.com/amalvelloth" className="text-white hover:underline">GitHub</a>
+                <a href="https://behance.net/amalvelloth" className="text-white hover:underline">Behance</a>
               </div>
               <a href="" className="bg-[#D6E0FF] lg:ml-10 py-3 px-4 text-black hover:underline">Let's collaborate</a>
             </div>
