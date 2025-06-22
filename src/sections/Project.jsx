@@ -6,6 +6,7 @@ import nikeAdidas from "../assets/images/nikeAdidas.png";
 import midnightMagic from "../assets/images/midnightMagic.png";
 import zenitsu from "../assets/images/zenitsu.png";
 import urcristiano from "../assets/images/RonaldoSite.png";
+import appleVisionPro from "../assets/images/appleVisionPro.png";
 import space from '../assets/spacetravel.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -160,6 +161,20 @@ function Project() {
                     <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">HTML</span>
                     <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">JAVASCRIPT</span>
                     <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">GSAP</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">BOOTSTRAP</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="https://apple-clone-webdesign.netlify.app/" target="_blank" rel="noopener noreferrer">
+              <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold">
+                <div className="box w-3/4 max-md:w-full max-md:px-2">
+                  <img className="w-full" draggable="false" src={appleVisionPro} alt="Apple Vision Pro Project" />
+                  <h2 className="text-2xl font-rmneue mt-3 font-thin flex items-center justify-between">Apple website clone <span className="font-pptelegraf text-[12px] text-[#6A6A6A]">SEPT 2024</span></h2>
+                  <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">A fully responsive Apple clone website, This website replicates Apple’s iconic minimal design, clean typography with bold sections and layouts.</p>
+                  <div className="flex flex-wrap mt-2 gap-2 sm:gap-4">
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">HTML</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">CSS</span>
                     <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">BOOTSTRAP</span>
                   </div>
                 </div>
