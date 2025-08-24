@@ -7,6 +7,7 @@ import midnightMagic from "../assets/images/midnightMagic.png";
 import zenitsu from "../assets/images/zenitsu.png";
 import urcristiano from "../assets/images/RonaldoSite.png";
 import appleVisionPro from "../assets/images/appleVisionPro.png";
+import bmwm from "../assets/images/bmwm.png";
 import space from '../assets/spacetravel.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -95,7 +96,7 @@ function Project() {
           <div className="leftblock w-[30%] h-[100vh] max-md:h-full max-md:w-full max-md:items-start flex flex-col items-center justify-center text-white">
             <div className="title p-2">
               <h1 className="text-3xl font-bold">Projects</h1>
-              <h1 className="text-2xl font-thin">These are my Projects</h1>
+              <h1 className="text-2xl font-thin">Turning ideas into <br /> interactive web design concepts</h1>
             </div>
           </div>
 
@@ -106,6 +107,20 @@ function Project() {
                 Live site &#8599;
               </h2>
             </div>
+            <a href="https://apple-clone-webdesign.netlify.app/" target="_blank" rel="noopener noreferrer">
+              <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold">
+                <div className="box w-3/4 max-md:w-full max-md:px-2">
+                  <img className="w-full" draggable="false" src={bmwm} alt="Bmw M Project" />
+                  <h2 className="text-2xl font-rmneue mt-3 font-thin flex items-center justify-between">BMW M  <span className="font-pptelegraf text-[12px] text-[#6A6A6A]">MAR 2024</span></h2>
+                  <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">Fan-made BMW M landing page. Inspired by the BMW M series,</p>
+                  <div className="flex flex-wrap mt-2 gap-2 sm:gap-4">
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">HTML</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">CSS</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">BOOTSTRAP</span>
+                  </div>
+                </div>
+              </div>
+            </a>
             <a href="https://nike-adidas.netlify.app/" target="_blank" rel="noopener noreferrer">
               <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold max-md:mb-3">
                 <div className="box w-3/4 max-md:w-full max-md:px-2">
