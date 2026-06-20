@@ -8,6 +8,8 @@ import zenitsu from "../assets/images/zenitsu.png";
 import urcristiano from "../assets/images/RonaldoSite.png";
 import appleVisionPro from "../assets/images/appleVisionPro.png";
 import bmwm from "../assets/images/bmwm.png";
+import  kanbanBoard from "../assets/images/kanban_board.png";
+
 import space from '../assets/spacetravel.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -191,6 +193,25 @@ function Project() {
                     <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">HTML</span>
                     <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">CSS</span>
                     <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">BOOTSTRAP</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="https://kanbanflowx.vercel.app/login" target="_blank" rel="noopener noreferrer">
+              <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold">
+                <div className="box w-3/4 max-md:w-full max-md:px-2">
+                  <img className="w-full" draggable="false" src={kanbanBoard} alt="kanban board login" />
+                  <h2 className="text-2xl font-rmneue mt-3 font-thin flex items-center justify-between">Kanban board <span className="font-pptelegraf text-[12px] text-[#6A6A6A]">SEPT 2024</span></h2>
+                  <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">A dynamic full-stack productivity application designed to streamline workflows through intuitive task and project management.</p>
+                  <div className="flex flex-wrap mt-2 gap-2 sm:gap-4">
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">REACT</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">JAVASCRIPT</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">TAILWIND CSS</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">GSAP</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">MONGODB</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">NODE JS</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">EXPRESS JS</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">REST API</span>
                   </div>
                 </div>
               </div>
