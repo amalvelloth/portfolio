@@ -248,6 +248,12 @@ function App() {
 
       <Router>
         <VideoBackground />
+
+        {/* Global Frame Lines (Left, Right, Bottom) */}
+        <div className="fixed lg:block hidden left-[1.4rem] top-[1.4rem] bottom-[1.4rem] w-[1px] bg-[#474747] z-30 pointer-events-none"></div>
+        <div className="fixed lg:block hidden right-[1.4rem] top-[1.4rem] bottom-[1.4rem] w-[1px] bg-[#474747] z-30 pointer-events-none"></div>
+        <div className="fixed lg:block hidden left-[1.4rem] right-[1.4rem] bottom-[1.4rem] h-[1px] bg-[#474747] z-30 pointer-events-none"></div>
+
         <Header />
         <AnimatedRoutes />
         <Footer />
