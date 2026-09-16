@@ -12,63 +12,121 @@ import ContactPage from './page/ContactPage';
 import transition from './transition';
 import VideoBackground from './components/VideoBackground';
 
+import spaceVideo from './assets/spacetravel.mp4';
+import blackSpaceVideo from './assets/black_space.mp4';
+import nikeAdidas from './assets/images/nikeAdidas.png';
+import appleVisionPro from './assets/images/appleVisionPro.png';
+import bmwm from './assets/images/bmwm.png';
+import workingImg from './assets/working.jpg';
+import midnightMagic from './assets/images/midnightMagic.png';
+import zenitsu from './assets/images/zenitsu.png';
+import urcristiano from './assets/images/RonaldoSite.png';
+import kanbanBoard from './assets/images/kanban_board.png';
+
 const AnimatedContactPage = transition(ContactPage);
 
+const CRITICAL_IMAGES = [
+  nikeAdidas,
+  appleVisionPro,
+  bmwm,
+  workingImg,
+  midnightMagic,
+  zenitsu,
+  urcristiano,
+  kanbanBoard,
+];
+
+const CRITICAL_VIDEOS = [spaceVideo, blackSpaceVideo];
+
 function LoadingScreen({ onComplete }) {
-  const [progress, setProgress] = useState(0);
-  const [isWindowLoaded, setIsWindowLoaded] = useState(
-    typeof document !== 'undefined' && document.readyState === 'complete'
-  );
+  const [displayProgress, setDisplayProgress] = useState(0);
 
   useEffect(() => {
-    const handleLoad = () => {
-      setIsWindowLoaded(true);
+    let loadedCount = 0;
+    const totalAssets = CRITICAL_IMAGES.length + CRITICAL_VIDEOS.length + 2; // +1 for fonts, +1 for window load
+    let targetProgress = 0;
+    let isFinished = false;
+
+    const increment = () => {
+      loadedCount += 1;
+      targetProgress = Math.min(Math.round((loadedCount / totalAssets) * 100), 100);
     };
 
+    // 1. Check window load
     if (document.readyState === 'complete') {
-      setIsWindowLoaded(true);
+      increment();
     } else {
-      window.addEventListener('load', handleLoad);
+      window.addEventListener('load', increment, { once: true });
     }
 
+    // 2. Check fonts
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(() => {
-        // Fonts are loaded
+        increment();
       });
+    } else {
+      increment();
     }
 
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
-  }, []);
+    // 3. Preload all critical images
+    CRITICAL_IMAGES.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      if (img.complete) {
+        increment();
+      } else {
+        img.onload = increment;
+        img.onerror = increment; // Fallback so it doesn't get stuck if an image fails
+      }
+    });
 
-  useEffect(() => {
+    // 4. Preload and buffer critical videos
+    CRITICAL_VIDEOS.forEach((src) => {
+      const video = document.createElement('video');
+      video.src = src;
+      video.preload = 'auto';
+      video.muted = true;
+      video.playsInline = true;
+
+      const handleVideoReady = () => {
+        increment();
+        video.removeEventListener('canplaythrough', handleVideoReady);
+        video.removeEventListener('loadeddata', handleVideoReady);
+      };
+
+      if (video.readyState >= 3) {
+        increment();
+      } else {
+        video.addEventListener('canplaythrough', handleVideoReady, { once: true });
+        video.addEventListener('loadeddata', handleVideoReady, { once: true });
+        video.addEventListener('error', increment, { once: true });
+        video.load();
+      }
+    });
+
+    // Smoothly animate displayProgress towards targetProgress
     const interval = setInterval(() => {
-      setProgress((prev) => {
-        // If window has not loaded yet, cap progress at 88%
-        if (!isWindowLoaded && prev >= 88) {
-          return prev;
+      setDisplayProgress((prev) => {
+        if (prev < targetProgress) {
+          const step = Math.max(1, Math.ceil((targetProgress - prev) / 4));
+          return Math.min(prev + step, 100);
         }
 
-        if (prev >= 100) {
+        if (prev >= 100 && targetProgress >= 100 && !isFinished) {
+          isFinished = true;
           clearInterval(interval);
           setTimeout(() => {
             onComplete();
-          }, 350);
+          }, 400);
           return 100;
         }
 
-        // Fast ramp-up once fully loaded, otherwise steady increments
-        const step = isWindowLoaded
-          ? Math.floor(Math.random() * 8) + 6
-          : Math.floor(Math.random() * 6) + 2;
-
-        return Math.min(prev + step, 100);
+        return prev;
       });
-    }, 45);
+    }, 30);
 
     return () => clearInterval(interval);
-  }, [isWindowLoaded, onComplete]);
+  }, [onComplete]);
 
   return (
     <motion.div
@@ -106,8 +164,8 @@ function LoadingScreen({ onComplete }) {
         {/* Minimal Progress Bar */}
         <div className="w-48 md:w-80 h-[2px] bg-[#222222] mt-10 relative overflow-hidden rounded-full border border-[#333333]">
           <motion.div
-            className="h-full bg-white transition-all duration-150 ease-out"
-            style={{ width: `${progress}%` }}
+            className="h-full bg-white transition-all duration-100 ease-out"
+            style={{ width: `${displayProgress}%` }}
           />
         </div>
       </div>
@@ -115,12 +173,12 @@ function LoadingScreen({ onComplete }) {
       {/* Bottom Counter & Status */}
       <div className="flex justify-between items-end font-mono">
         <div className="text-xs md:text-sm text-[#777777] hidden sm:block">
-          <span>SYSTEM // READY</span>
+          <span>SYSTEM // BUFFERING ASSETS</span>
         </div>
 
         <div className="text-right ml-auto">
           <span className="text-5xl md:text-7xl font-mono font-bold tracking-tight text-white">
-            {progress}
+            {displayProgress}
           </span>
           <span className="text-lg md:text-2xl text-[#888888] ml-1 font-mono">%</span>
         </div>
