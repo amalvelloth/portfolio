@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { GoArrowRight } from "react-icons/go";
 import BurgerMenu from '../components/BurgerMenu';
 import Swal from 'sweetalert2';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function ContactPage() {
   const [result, setResult] = React.useState("");
+  const bannerRef = useRef(null);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.to(bannerRef.current, {
+        x: -400,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 1.2,
+        },
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -34,14 +57,24 @@ function ContactPage() {
 
   return (
     <>
-      <section className='flex flex-col justify-center items-center min-h-screen w-full text-center bg-[#F5F5E9] text-black relative overflow-hidden'>
-        <div className='gap-10 pt-36 flex items-center top-[7rem] left-[3rem]'>
+      <section
+        ref={sectionRef}
+        className='flex flex-col justify-center items-center min-h-screen w-full text-center bg-[#F5F5E9] text-black relative overflow-hidden'
+      >
+        <div
+          ref={bannerRef}
+          className='w-full flex items-center gap-10 pt-36 whitespace-nowrap will-change-transform select-none'
+        >
           <h1 className='text-9xl leading-loose font-HelveticaNowDisplayMedium'>Connect</h1>
-          <GoArrowRight className='text-9xl' />
+          <GoArrowRight className='text-9xl shrink-0' />
           <h1 className='text-9xl leading-loose font-HelveticaNowDisplayMedium'>Connect</h1>
-          <GoArrowRight className='text-9xl' />
+          <GoArrowRight className='text-9xl shrink-0' />
           <h1 className='text-9xl leading-loose font-HelveticaNowDisplayMedium'>Connect</h1>
-          <GoArrowRight className='text-9xl' />
+          <GoArrowRight className='text-9xl shrink-0' />
+          <h1 className='text-9xl leading-loose font-HelveticaNowDisplayMedium'>Connect</h1>
+          <GoArrowRight className='text-9xl shrink-0' />
+          <h1 className='text-9xl leading-loose font-HelveticaNowDisplayMedium'>Connect</h1>
+          <GoArrowRight className='text-9xl shrink-0' />
         </div>
 
         <div className="flex flex-col items-center bg-white lg:w-3/4 max-lg:w-[95%] rounded mx-10 my-1">
