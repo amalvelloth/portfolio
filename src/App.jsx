@@ -14,14 +14,14 @@ import VideoBackground from './components/VideoBackground';
 
 import spaceVideo from './assets/spacetravel.mp4';
 import blackSpaceVideo from './assets/black_space.mp4';
-import nikeAdidas from './assets/images/nikeAdidas.png';
-import appleVisionPro from './assets/images/appleVisionPro.png';
-import bmwm from './assets/images/bmwm.png';
+import nikeAdidas from './assets/images/nikeAdidas.jpg';
+import appleVisionPro from './assets/images/appleVisionPro.jpg';
+import bmwm from './assets/images/bmwm.jpg';
 import workingImg from './assets/working.jpg';
-import midnightMagic from './assets/images/midnightMagic.png';
-import zenitsu from './assets/images/zenitsu.png';
-import urcristiano from './assets/images/RonaldoSite.png';
-import kanbanBoard from './assets/images/kanban_board.png';
+import midnightMagic from './assets/images/midnightMagic.jpg';
+import zenitsu from './assets/images/zenitsu.jpg';
+import urcristiano from './assets/images/RonaldoSite.jpg';
+import kanbanBoard from './assets/images/kanban_board.jpg';
 
 const AnimatedContactPage = transition(ContactPage);
 

@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import LineWrapper from "../components/LineWrapper";
-import nikeAdidas from "../assets/images/nikeAdidas.png";
-import midnightMagic from "../assets/images/midnightMagic.png";
-import zenitsu from "../assets/images/zenitsu.png";
-import urcristiano from "../assets/images/RonaldoSite.png";
-import appleVisionPro from "../assets/images/appleVisionPro.png";
-import bmwm from "../assets/images/bmwm.png";
-import  kanbanBoard from "../assets/images/kanban_board.png";
+import nikeAdidas from "../assets/images/nikeAdidas.jpg";
+import midnightMagic from "../assets/images/midnightMagic.jpg";
+import zenitsu from "../assets/images/zenitsu.jpg";
+import urcristiano from "../assets/images/RonaldoSite.jpg";
+import appleVisionPro from "../assets/images/appleVisionPro.jpg";
+import bmwm from "../assets/images/bmwm.jpg";
+import kanbanBoard from "../assets/images/kanban_board.jpg";
 
 import space from '../assets/spacetravel.mp4';
 
