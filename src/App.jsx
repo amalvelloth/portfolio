@@ -16,25 +16,59 @@ const AnimatedContactPage = transition(ContactPage);
 
 function LoadingScreen({ onComplete }) {
   const [progress, setProgress] = useState(0);
+  const [isWindowLoaded, setIsWindowLoaded] = useState(
+    typeof document !== 'undefined' && document.readyState === 'complete'
+  );
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsWindowLoaded(true);
+    };
+
+    if (document.readyState === 'complete') {
+      setIsWindowLoaded(true);
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        // Fonts are loaded
+      });
+    }
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
+        // If window has not loaded yet, cap progress at 88%
+        if (!isWindowLoaded && prev >= 88) {
+          return prev;
+        }
+
         if (prev >= 100) {
           clearInterval(interval);
           setTimeout(() => {
             onComplete();
-          }, 400);
+          }, 350);
           return 100;
         }
-        // Random increment for organic loading feel
-        const diff = Math.floor(Math.random() * 12) + 3;
-        return Math.min(prev + diff, 100);
+
+        // Fast ramp-up once fully loaded, otherwise steady increments
+        const step = isWindowLoaded
+          ? Math.floor(Math.random() * 8) + 6
+          : Math.floor(Math.random() * 6) + 2;
+
+        return Math.min(prev + step, 100);
       });
-    }, 90);
+    }, 45);
 
     return () => clearInterval(interval);
-  }, [onComplete]);
+  }, [isWindowLoaded, onComplete]);
 
   return (
     <motion.div
