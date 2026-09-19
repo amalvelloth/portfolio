@@ -193,7 +193,7 @@ function LoadingScreen({ onComplete }) {
   );
 }
 
-function AnimatedRoutes() {
+function AnimatedRoutes({ loading }) {
   const location = useLocation();
 
   return (
@@ -203,7 +203,7 @@ function AnimatedRoutes() {
           path="/"
           element={
             <main>
-              <Hero />
+              <Hero loading={loading} />
               <About />
               <Project />
               <Contact />
@@ -255,7 +255,7 @@ function App() {
         <div className="fixed lg:block hidden left-[1.4rem] right-[1.4rem] bottom-[1.4rem] h-[1px] bg-[#474747] z-30 pointer-events-none"></div>
 
         <Header />
-        <AnimatedRoutes />
+        <AnimatedRoutes loading={loading} />
         <Footer />
       </Router>
     </>

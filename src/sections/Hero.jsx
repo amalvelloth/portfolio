@@ -5,10 +5,12 @@ import BurgerMenu from '../components/BurgerMenu';
 import blackSpace from '../assets/black_space.mp4';
 import space from '../assets/spacetravel.mp4'; // Import the space video
 
-function Hero() {
+function Hero({ loading }) {
     const titleRef = useRef(null);
 
     useEffect(() => {
+        if (loading || !titleRef.current) return;
+
         const splitText = new SplitType(titleRef.current, { types: 'chars' });
 
         gsap.from(splitText.chars, {
@@ -16,13 +18,14 @@ function Hero() {
             y: 50,
             stagger: 0.05,
             duration: 0.6,
+            delay: 0.2, // Smooth start as loading screen slides away
             ease: "power3.out",
         });
 
         return () => {
             splitText.revert();
         };
-    }, []);
+    }, [loading]);
 
     return (
         <section
