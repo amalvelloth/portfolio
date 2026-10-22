@@ -23,6 +23,7 @@ import zenitsu from './assets/images/zenitsu.jpg';
 import urcristiano from './assets/images/RonaldoSite.jpg';
 import kanbanBoard from './assets/images/kanban_board.jpg';
 import loanitol from './assets/images/Loanitol.jpg';
+import tekhive from './assets/images/tekhive.jpg';
 
 const AnimatedContactPage = transition(ContactPage);
 
@@ -36,6 +37,7 @@ const CRITICAL_IMAGES = [
   urcristiano,
   kanbanBoard,
   loanitol,
+  tekhive,
 ];
 
 const CRITICAL_VIDEOS = [spaceVideo, blackSpaceVideo];
