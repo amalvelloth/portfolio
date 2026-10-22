@@ -9,6 +9,7 @@ import urcristiano from "../assets/images/RonaldoSite.jpg";
 import appleVisionPro from "../assets/images/appleVisionPro.jpg";
 import bmwm from "../assets/images/bmwm.jpg";
 import kanbanBoard from "../assets/images/kanban_board.jpg";
+import loanitol from "../assets/images/Loanitol.png";
 
 import space from '../assets/spacetravel.mp4';
 
@@ -124,6 +125,20 @@ function Project() {
                     <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">NODE JS</span>
                     <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">EXPRESS JS</span>
                     <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">REST API</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold max-md:mb-3">
+                <div className="box w-3/4 max-md:w-full max-md:px-2">
+                  <img className="w-full" draggable="false" src={loanitol} alt="Loanitol Project" />
+                  <h2 className="text-2xl font-rmneue mt-3 font-thin flex items-center justify-between">Loanitol <span className="font-pptelegraf text-[12px] text-[#6A6A6A]">Fintech Web App</span></h2>
+                  <p className="text-sm font-thin font-pptelegraf text-[#FFFFFF75]">A comprehensive financial platform designed to streamline loan management, calculations, and modern digital lending solutions.</p>
+                  <div className="flex flex-wrap mt-2 gap-2 sm:gap-4">
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">HTML</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">JAVASCRIPT</span>
+                    <span className="text-sm font-thin max-sm:text-[10px] font-pptelegraf text-white border border-[#474747] p-1 px-2 rounded-lg">BOOTSTRAP</span>
                   </div>
                 </div>
               </div>
