@@ -9,7 +9,7 @@ import urcristiano from "../assets/images/RonaldoSite.jpg";
 import appleVisionPro from "../assets/images/appleVisionPro.jpg";
 import bmwm from "../assets/images/bmwm.jpg";
 import kanbanBoard from "../assets/images/kanban_board.jpg";
-import loanitol from "../assets/images/Loanitol.png";
+import loanitol from "../assets/images/Loanitol.jpg";
 
 import space from '../assets/spacetravel.mp4';
 

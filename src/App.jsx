@@ -22,6 +22,7 @@ import midnightMagic from './assets/images/midnightMagic.jpg';
 import zenitsu from './assets/images/zenitsu.jpg';
 import urcristiano from './assets/images/RonaldoSite.jpg';
 import kanbanBoard from './assets/images/kanban_board.jpg';
+import loanitol from './assets/images/Loanitol.jpg';
 
 const AnimatedContactPage = transition(ContactPage);
 
@@ -34,6 +35,7 @@ const CRITICAL_IMAGES = [
   zenitsu,
   urcristiano,
   kanbanBoard,
+  loanitol,
 ];
 
 const CRITICAL_VIDEOS = [spaceVideo, blackSpaceVideo];
