@@ -129,7 +129,7 @@ function Project() {
                 </div>
               </div>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://loanitol.com/" target="_blank" rel="noopener noreferrer">
               <div className="details h-screen max-md:h-full max-md:py-10 text-white text-3xl font-bold max-md:mb-3">
                 <div className="box w-3/4 max-md:w-full max-md:px-2">
                   <img className="w-full" draggable="false" src={loanitol} alt="Loanitol Project" />
